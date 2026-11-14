@@ -105,7 +105,7 @@ func collision_handle() -> void:
 	$Player/Sprite2D.texture = load("res://gfx/player_back.png")
 	music.start_rewind()
 
-	speed = -speed*2
+	speed = -abs(speed*2)
 
 	await get_tree().create_timer(1.0).timeout
 
