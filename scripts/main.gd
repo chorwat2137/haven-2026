@@ -33,6 +33,8 @@ func generate_obs():
 		var obs
 		obs = obs_type.instantiate()
 		var obs_height = obs.get_node("Sprite2D").texture.get_height()
+		var obs_scale = obs.get_node("Sprite2D").scale
+		var obs_x: int = screen_size.x + score + 100
 		last_obs = obs
 		add_child(obs)
 		obstacles.append(obs)
