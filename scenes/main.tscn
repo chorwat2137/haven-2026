@@ -9,7 +9,7 @@ script = ExtResource("1_0wfyh")
 
 [node name="Spectrum" parent="." unique_id=137574055 instance=ExtResource("3_sugp2")]
 
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=1398734596]
+[node name="Linia" type="ColorRect" parent="." unique_id=1398734596]
 offset_left = -780.0
 offset_top = 240.0
 offset_right = 2650.0
