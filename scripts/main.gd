@@ -17,7 +17,7 @@ var last_obs
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	screen_size = get_viewport().get_visible_rect().size
-	$Spectrum.position.y = $Player.position.y - screen_size.y /2
+	$Player/Spectrum.position.x = $Player.position.x - screen_size.y
 	var center_y = screen_size.y / 2.0
 
 	lane_positions = [
