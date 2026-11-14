@@ -8,7 +8,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	position.x += get_parent().speed * 2
-  	if position.x < get_parent().get_node("Player").position.x:
+	if position.x < get_parent().get_node("Player").position.x:
 		self.queue_free()
 	
 func handle_delete(area):
