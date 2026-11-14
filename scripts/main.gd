@@ -1,5 +1,5 @@
 extends Node
-
+@onready var music = get_node("AudioStreamPlayer")
 var triola_scene = preload("res://scenes/triola.tscn")
 var pocisk_scene = preload("res://scenes/pocisk.tscn")
 var lane_positions: Array[float] = []

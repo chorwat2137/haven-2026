@@ -78,3 +78,9 @@ func get_sample(index: int, channel: int) -> float:
 	var value = original_data.decode_s16(offset)
 
 	return float(value) / 32768.0
+
+func start_rewind() -> void:
+	rewinding = true
+
+func stop_rewind() -> void:
+	rewinding = false
