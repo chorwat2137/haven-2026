@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 
 	score += speed * delta * 60
 	$Player.position.x += speed * delta * 60
-	$Spectrum.position = $Player.position
+	$Spectrum.position.x = $Player.position.x - screen_size.x /2
 	generate_obs()
 	
 func generate_obs():
