@@ -17,3 +17,5 @@ offset_bottom = 840.0
 color = Color(0.852, 0.63, 1, 0.7647059)
 
 [node name="Player" parent="." unique_id=2121710803 instance=ExtResource("1_o5qli")]
+
+[node name="Camera2D2" type="Camera2D" parent="Player" unique_id=2011008339]
