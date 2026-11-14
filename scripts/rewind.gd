@@ -18,6 +18,11 @@ var total_frames: int = 0
 func _ready() -> void:
 	var wav := stream as AudioStreamWAV
 
+	print("WAV format: ", wav.format)
+	print("8-bit: ", AudioStreamWAV.FORMAT_8_BITS)
+	print("16-bit: ", AudioStreamWAV.FORMAT_16_BITS)
+	print("IMA ADPCM: ", AudioStreamWAV.FORMAT_IMA_ADPCM)
+
 	if wav == null:
 		push_error("Audio must be WAV!")
 		return
