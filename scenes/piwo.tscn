@@ -23,7 +23,7 @@ script = ExtResource("2_fo4pj")
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=894869837]
 position = Vector2(59.4, 78.2)
 scale = Vector2(0.2, 0.2)
-zoom = Vector2(2, 1)
+zoom = Vector2(0.6, 0.3)
 position_smoothing_enabled = true
 position_smoothing_speed = 6.0
 
