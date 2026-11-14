@@ -10,4 +10,3 @@ script = ExtResource("1_0wfyh")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1594863125]
 position = Vector2(460, 0)
-position_smoothing_enabled = true
