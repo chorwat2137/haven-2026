@@ -47,7 +47,6 @@ position = Vector2(454, 0)
 
 [node name="Spectrum" parent="Player/Camera2D2" unique_id=137574055 instance=ExtResource("3_sugp2")]
 z_index = -1
-offset_left = -951.0
-offset_top = -529.0
-offset_right = -911.0
-offset_bottom = -489.0
+offset_left = -960.0
+offset_right = -920.0
+offset_bottom = 40.0
