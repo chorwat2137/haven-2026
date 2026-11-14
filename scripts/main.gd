@@ -47,7 +47,7 @@ func generate_obs():
 			var obs_height = obs.get_node("Sprite2D").texture.get_height()
 			var obs_scale = obs.get_node("Sprite2D").scale
 			var obs_x: int = screen_size.x + score + 100
-			var obs_y: int = screen_size.y / 2.0 + obstacle_heights[randi() % obstacle_heights.size()]
+			var obs_y: float = lane_positions[randi() % lane_positions.size()]
 			last_obs = obs
 			add_obs(obs, obs_x, obs_y)
 
