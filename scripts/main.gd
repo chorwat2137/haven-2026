@@ -97,7 +97,7 @@ func collision_handle() -> void:
 		return
 
 	is_rewinding = true
-
+	$Player/Sprite2D.texture = load("res://gfx/player_back.png")
 	music.start_rewind()
 
 	speed = -START_SPEED*2
@@ -108,4 +108,5 @@ func collision_handle() -> void:
 
 
 	speed = START_SPEED
+	$Player/Sprite2D.texture = load("res://gfx/player_forward.png")
 	is_rewinding = false
