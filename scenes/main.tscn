@@ -2,10 +2,15 @@
 
 [ext_resource type="Script" uid="uid://dr8cf3fux3q7n" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://c61woxbidsqx" path="res://scenes/player.tscn" id="1_o5qli"]
-[ext_resource type="PackedScene" uid="uid://rvj0gr7220mv" path="res://scenes/wiktor.tscn" id="3_sugp2"]
+[ext_resource type="AudioStream" uid="uid://5y3mbq1d6jku" path="res://sfx/music/Ayahuasca - New Moon.wav" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://g1ip3d8jtu60" path="res://scenes/spectrum.tscn" id="3_sugp2"]
 
 [node name="Node" type="Node" unique_id=839730489]
 script = ExtResource("1_0wfyh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1525278650]
+stream = ExtResource("2_jyhfs")
+autoplay = true
 
 [node name="Linia" type="ColorRect" parent="." unique_id=1232044274]
 offset_left = -780.0
@@ -37,6 +42,9 @@ color = Color(0.52649975, 0.83965874, 0.18535423, 0.7647059)
 [node name="Player" parent="." unique_id=2121710803 instance=ExtResource("1_o5qli")]
 
 [node name="Spectrum" parent="Player" unique_id=137574055 instance=ExtResource("3_sugp2")]
-position = Vector2(-500, -540)
+offset_left = -500.0
+offset_top = -540.0
+offset_right = 1420.0
+offset_bottom = 540.0
 
 [node name="Camera2D2" type="Camera2D" parent="Player" unique_id=2011008339]
