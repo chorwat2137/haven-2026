@@ -48,13 +48,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if speed < MAX_SPEED:
-		speed += 0.01
-		cur_speed = speed
+	if cur_speed < MAX_SPEED:
+		cur_speed += 0.01
 	score += speed
 	$Player.position.x += speed * delta * 60
 	#$Spectrum.position.x = $Player.position.x - screen_size.x /2
-	$Linia.position.x = $Player.position.x - screen_size.x /2
+	$Linia.position.x = $Player.position.x - screen_size.x
 	#$Spectrum.position.y = $Player.position.y - screen_size.y /2
 	generate_obs()
 
@@ -112,6 +111,6 @@ func collision_handle() -> void:
 
 	music.stop_rewind()
 
-	speed = cur_speed
+	speed = START_SPEED
 	$Player/Sprite2D.texture = load("res://gfx/player_forward.png")
 	is_rewinding = false
