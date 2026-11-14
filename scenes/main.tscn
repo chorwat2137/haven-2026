@@ -46,6 +46,7 @@ color = Color(0.52649975, 0.83965874, 0.18535423, 0.7647059)
 [node name="Player" parent="." unique_id=2121710803 instance=ExtResource("1_o5qli")]
 
 [node name="Camera2D2" type="Camera2D" parent="Player" unique_id=2011008339]
+position = Vector2(459, 0)
 
 [node name="Spectrum" parent="Player/Camera2D2" unique_id=137574055 instance=ExtResource("3_sugp2")]
 z_index = -1
