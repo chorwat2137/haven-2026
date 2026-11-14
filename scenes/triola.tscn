@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_f7mvp"]
 radius = 47.0
 
-[node name="Triola" type="Area2D" unique_id=307245731]
+[node name="Triola" type="Area2D" unique_id=307245731 groups=["obsticles"]]
 script = ExtResource("1_qrvsx")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1819449505]

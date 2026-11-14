@@ -61,7 +61,7 @@ var min_distance = 1000
 
 
 func generate_obs():
-	if obstacles.is_empty() or last_obs.position.x < score + min_distance:
+	if obstacles.is_empty() or last_obs == null or last_obs.position.x < score + min_distance:
 
 		var obs_type = obstacle_types[randi() % obstacle_types.size()]
 
@@ -73,7 +73,7 @@ func generate_obs():
 
 		for i in range(obs_count):
 			var obs = obs_type.instantiate()
-
+			
 			var obs_x: float = screen_size.x + score + 100
 			var obs_y: float = lane_positions[available_lanes[i]]
 
@@ -83,15 +83,19 @@ func generate_obs():
 
 func add_obs(obs, x, y):
 	obs.position = Vector2i(x, y)
+	obs.add_to_group("obsticles")
 	obs.body_entered.connect(hit_obs)
+
 	add_child(obs)
 	obstacles.append(obs)
 
 func hit_obs(body):
 	if body.name == "Player":
 		collision_handle()
+
 		
 
+	
 func collision_handle() -> void:
 
 	if is_rewinding:

@@ -1,11 +1,15 @@
 extends Area2D
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	self.area_entered.connect(handle_delete)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	position.x += get_parent().speed * 2
+	
+func handle_delete(area):
+	print("kolizja")
+	area.queue_free()
+	self.queue_free()
