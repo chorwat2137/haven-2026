@@ -36,9 +36,12 @@ func _process(delta: float) -> void:
 	$Spectrum.position.x = $Player.position.x - screen_size.x /2
 	$Spectrum.position.y = $Player.position.y - screen_size.y /2
 	generate_obs()
-	
+
+var min_distance = 300
+
+
 func generate_obs():
-	if obstacles.is_empty() or last_obs.position.x < score + randi_range(300, 500):
+	if obstacles.is_empty() or last_obs.position.x < score + min_distance::
 
 		var obs_type = obstacle_types[randi() % obstacle_types.size()]
 
