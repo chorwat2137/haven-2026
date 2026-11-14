@@ -1,29 +1,46 @@
 extends CharacterBody2D
 
-@export var lane_distance: float = 200.0
+var lane_positions: Array[float] = []
+var bullet = preload("res://scenes/mojpocisk.tscn")
 @export var movement_speed: float = 10.0
 
 var current_lane: int = 1 # 0 = top, 1 = middle, 2 = bottom
 var center_y: float
 
+func shoot():
+	var b = bullet.instantiate()
+	var b_y = self.position.y
+	var b_x = self.position.x
+	b.position = Vector2i(b_x, b_y)
+	get_parent().add_child(b)
+
 func _ready() -> void:
 	# Get vertical center of the screen
 	center_y = get_viewport_rect().size.y / 2.0
 
-	# Start in the middle of the screen
-	position.y = center_y
+	# Define the three lanes
+	lane_positions = [
+		center_y - 200,
+		center_y,
+		center_y + 200
+	]
+
+	# Start in the middle lane
+	position.y = lane_positions[current_lane]
 
 
 func _process(delta: float) -> void:
-
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
+	# Keyboard input
 	if Input.is_action_just_pressed("ui_up"):
 		current_lane = max(0, current_lane - 1)
 
 	if Input.is_action_just_pressed("ui_down"):
 		current_lane = min(2, current_lane + 1)
 
-	# Calculate target position
-	var target_y = center_y + (current_lane - 1) * lane_distance
+	# Get target Y position
+	var target_y: float = lane_positions[current_lane]
 
 	# Smooth movement
 	position.y = lerp(
