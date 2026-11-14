@@ -49,7 +49,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if speed < MAX_SPEED and is_rewinding == false:
-		speed += 0.01
+		speed += 0.05
 	score += speed
 	$Player.position.x += speed * delta * 60
 	#$Spectrum.position.x = $Player.position.x - screen_size.x /2
