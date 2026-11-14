@@ -14,11 +14,11 @@ func _process(delta: float) -> void:
 		current_lane = min(2, current_lane + 1)
 
 	# Calculate target X position
-	var target_x = (current_lane - 1) * lane_distance
+	var target_y = (current_lane - 1) * lane_distance
 
 	# Smoothly move player
-	position.x = lerp(
-		position.x,
-		target_x,
+	position.y = lerp(
+		position.y,
+		target_y,
 		1.0 - exp(-movement_speed * delta)
 	)
