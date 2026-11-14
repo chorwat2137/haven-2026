@@ -18,6 +18,7 @@ var last_obs
 func _ready() -> void:
 	screen_size = get_viewport().get_visible_rect().size
 	$Player/Spectrum.position.x = 0 - screen_size.x /2
+	$Player/Spectrum.position.y = 0 - screen_size.y /2
 	var center_y = screen_size.y / 2.0
 
 	lane_positions = [
