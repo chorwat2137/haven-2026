@@ -38,9 +38,9 @@ color = Color(0.52649975, 0.83965874, 0.18535423, 0.7647059)
 
 [node name="Spectrum" parent="Player" unique_id=137574055 instance=ExtResource("3_sugp2")]
 z_index = -1
-offset_left = -965.0
+offset_left = -1149.0
 offset_top = -540.0
-offset_right = 955.0
+offset_right = 771.0
 offset_bottom = 540.0
 
 [node name="Camera2D2" type="Camera2D" parent="Player" unique_id=2011008339]
