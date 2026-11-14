@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ce6atwcor46rl"]
 
-[ext_resource type="Script" uid="uid://dt8sjdfy0kc8n" path="res://scenes/player.gd" id="1_b7hsf"]
+[ext_resource type="Script" uid="uid://dt8sjdfy0kc8n" path="res://old/player.gd" id="1_b7hsf"]
 [ext_resource type="Texture2D" uid="uid://dqfnica024n7u" path="res://gfx/player_forward.png" id="2_b7hsf"]
 [ext_resource type="Texture2D" uid="uid://b041f43x8f4nf" path="res://gfx/podstawa.png" id="3_3rxxt"]
 
