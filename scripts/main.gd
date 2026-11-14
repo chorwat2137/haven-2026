@@ -3,7 +3,7 @@ extends Node
 var triola_scene = preload("res://scenes/triola.tscn")
 var pocisk_scene = preload("res://scenes/pocisk.tscn")
 
-var obstacle_types := [triola_scene]
+var obstacle_types := [triola_scene, pocisk_scene]
 var obstacles : Array
 var obstacle_heights = [200, 0, -200]
 
@@ -16,16 +16,16 @@ var score = 0
 var last_obs
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	screen_size = get_window().size
-	pass
+	screen_size = get_viewport().get_visible_rect().size
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	speed = START_SPEED
-	score += speed
-	$Player.position.x += speed
-	print(score)
+
+	score += speed * delta * 60
+	$Player.position.x += speed * delta * 60
+
 	generate_obs()
 	
 func generate_obs():
