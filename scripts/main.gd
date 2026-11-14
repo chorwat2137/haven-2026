@@ -1,5 +1,5 @@
 extends Node
-
+@onready var music = get_node("AudioStreamPlayer")
 var triola_scene = preload("res://scenes/triola.tscn")
 var pocisk_scene = preload("res://scenes/pocisk.tscn")
 var lane_positions: Array[float] = []
@@ -7,9 +7,12 @@ var obstacle_types := [triola_scene, pocisk_scene]
 var obstacles : Array
 var obstacle_heights = [200, 0, -200]
 
+<<<<<<< HEAD
 var rewind_duration = 120
 var current_rewind = 121
 
+=======
+>>>>>>> c76b076666fd7d8423496b8670f1cbe5c835795a
 var speed: float
 const START_SPEED: float = 5.0
 const MAX_SPEED: int = 25
@@ -24,8 +27,7 @@ func _ready() -> void:
 	
 	speed = START_SPEED
 	screen_size = get_viewport().get_visible_rect().size
-	$Player/Spectrum.position.x = 0 - screen_size.x /2
-	$Player/Spectrum.position.y = 0 - screen_size.y /2
+	$Player/Camera2D2/Spectrum.position.y = 0 - screen_size.y /2
 	var center_y = screen_size.y / 2.0
 
 	lane_positions = [
