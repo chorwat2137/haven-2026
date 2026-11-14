@@ -43,6 +43,7 @@ color = Color(0.52649975, 0.83965874, 0.18535423, 0.7647059)
 [node name="Player" parent="." unique_id=2121710803 instance=ExtResource("1_o5qli")]
 
 [node name="Spectrum" parent="Player" unique_id=137574055 instance=ExtResource("3_sugp2")]
+z_index = -1
 offset_left = -942.0
 offset_top = -529.0
 offset_right = -902.0
