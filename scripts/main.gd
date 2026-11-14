@@ -7,12 +7,9 @@ var obstacle_types := [triola_scene, pocisk_scene]
 var obstacles : Array
 var obstacle_heights = [200, 0, -200]
 
-<<<<<<< HEAD
 var rewind_duration = 120
 var current_rewind = 121
 
-=======
->>>>>>> c76b076666fd7d8423496b8670f1cbe5c835795a
 var speed: float
 const START_SPEED: float = 5.0
 const MAX_SPEED: int = 25
