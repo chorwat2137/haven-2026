@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://ciftw48npy2hw"]
 
 [ext_resource type="Script" uid="uid://hu4l3gn0387d" path="res://scenes/sprite_2d.gd" id="1_7p1mj"]
+[ext_resource type="Texture2D" uid="uid://rjq3j2ixkw01" path="res://gfx/enemy/1.png" id="1_md0e3"]
 
 [node name="Node2D" type="Node2D" unique_id=725913305]
 
 [node name="Enemy" type="CharacterBody2D" parent="." unique_id=1779240352]
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemy" unique_id=1739146719]
+texture = ExtResource("1_md0e3")
 script = ExtResource("1_7p1mj")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemy" unique_id=267278756]
