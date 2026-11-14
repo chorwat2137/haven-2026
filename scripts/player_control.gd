@@ -21,4 +21,4 @@ func _process(delta: float) -> void:
 		position.y,
 		target_y,
 		1.0 - exp(-movement_speed * delta)
-	) + 540
+	) 
