@@ -9,25 +9,22 @@ script = ExtResource("1_0wfyh")
 
 [node name="Spectrum" parent="." unique_id=137574055 instance=ExtResource("3_sugp2")]
 
-[node name="Linia2" type="ColorRect" parent="." unique_id=1270531464]
+[node name="Linia" type="Container" parent="." unique_id=81826746]
 offset_left = -780.0
 offset_top = 240.0
-offset_right = 2650.0
-offset_bottom = 440.0
+offset_right = -740.0
+offset_bottom = 280.0
+
+[node name="Linia2" type="ColorRect" parent="Linia" unique_id=1270531464]
+layout_mode = 2
 color = Color(0.852, 0.63, 1, 0.7647059)
 
-[node name="Linia3" type="ColorRect" parent="." unique_id=1715034830]
-offset_left = -780.0
-offset_top = 440.0
-offset_right = 2650.0
-offset_bottom = 640.0
+[node name="Linia3" type="ColorRect" parent="Linia" unique_id=1715034830]
+layout_mode = 2
 color = Color(0.20026606, 0.81195885, 0.9795131, 0.7647059)
 
-[node name="Linia4" type="ColorRect" parent="." unique_id=1620266623]
-offset_left = -780.0
-offset_top = 640.0
-offset_right = 2650.0
-offset_bottom = 840.0
+[node name="Linia4" type="ColorRect" parent="Linia" unique_id=1620266623]
+layout_mode = 2
 color = Color(0.52649975, 0.83965874, 0.18535423, 0.7647059)
 
 [node name="Player" parent="." unique_id=2121710803 instance=ExtResource("1_o5qli")]
