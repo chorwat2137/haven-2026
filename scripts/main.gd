@@ -31,7 +31,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	speed = START_SPEED
 	
-	score += speed * delta * 60
+	score += speed
 	$Player.position.x += speed * delta * 60
 	$Spectrum.position.x = $Player.position.x - screen_size.x /2
 	$Spectrum.position.y = $Player.position.y - screen_size.y /2
