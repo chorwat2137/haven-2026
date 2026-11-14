@@ -14,7 +14,8 @@ var current_rewind = 121
 
 var speed: float
 const START_SPEED: float = 5.0
-const MAX_SPEED: int = 25
+const MAX_SPEED: float = 25.0
+var cur_speed: float = START_SPEED
 var screen_size: Vector2i
 var score = 0
 var last_obs
@@ -89,9 +90,9 @@ func collision_handle() -> void:
 
 	music.start_rewind()
 
-	speed = -START_SPEED
+	speed = -START_SPEED*2
 
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.0).timeout
 
 	music.stop_rewind()
 
