@@ -9,8 +9,8 @@ var center_y: float
 
 func shoot():
 	var b = bullet.instantiate()
-	var b_y = get_parent().position.y
-	var b_x = get_parent().position.x
+	var b_y = position.y
+	var b_x = position.x
 	b.position = Vector2i(b_x, b_y)
 	get_parent().add_child(b)
 
