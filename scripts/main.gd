@@ -41,7 +41,7 @@ var min_distance = 300
 
 
 func generate_obs():
-	if obstacles.is_empty() or last_obs.position.x < score + min_distance::
+	if obstacles.is_empty() or last_obs.position.x < score + min_distance:
 
 		var obs_type = obstacle_types[randi() % obstacle_types.size()]
 
