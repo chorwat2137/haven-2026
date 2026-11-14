@@ -8,7 +8,7 @@ var obstacles : Array
 var obstacle_heights = [200, 0, -200]
 
 
-var speed: float
+@export var speed: float
 const START_SPEED: float = 5.0
 const MAX_SPEED: int = 25
 var screen_size: Vector2i
