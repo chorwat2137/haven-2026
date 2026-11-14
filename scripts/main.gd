@@ -81,7 +81,8 @@ func hit_obs(body):
 		collision_handle()
 		
 func collision_handle():
-	speed = -5
+	music.start_rewind()
+	speed = -START_SPEED
 	var timer = Timer.new()
 	add_child(timer)
 	timer.wait_time = 2.0
@@ -90,4 +91,5 @@ func collision_handle():
 	timer.start()
 	
 func _on_timer_timeout():
+	music.stop_rewind()
 	speed = START_SPEED
