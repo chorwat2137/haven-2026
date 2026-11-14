@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dr8cf3fux3q7n" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://c61woxbidsqx" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://g1ip3d8jtu60" path="res://scenes/spectrum.tscn" id="3_sugp2"]
+[ext_resource type="AudioStream" uid="uid://5y3mbq1d6jku" path="res://sfx/music/Ayahuasca - New Moon.wav" id="4_jyhfs"]
 
 [node name="Node" type="Node" unique_id=839730489]
 script = ExtResource("1_0wfyh")
@@ -37,10 +38,10 @@ color = Color(0.52649975, 0.83965874, 0.18535423, 0.7647059)
 [node name="Player" parent="." unique_id=2121710803 instance=ExtResource("1_o5qli")]
 
 [node name="Spectrum" parent="Player" unique_id=137574055 instance=ExtResource("3_sugp2")]
-z_index = -1
-offset_left = -968.0
-offset_top = -534.0
-offset_right = 1066.0
-offset_bottom = 546.0
 
 [node name="Camera2D2" type="Camera2D" parent="Player" unique_id=2011008339]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1628355729]
+stream = ExtResource("4_jyhfs")
+autoplay = true
+bus = &"Music"
