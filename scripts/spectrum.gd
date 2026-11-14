@@ -1,4 +1,4 @@
-extends Polygon2D
+extends ColorRect
 
 const BAR_COUNT: int = 32
 const FREQ_MAX: float = 11050.0
