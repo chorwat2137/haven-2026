@@ -26,10 +26,10 @@ func _on_resized() -> void:
 func _update_spectrum_data() -> void:
 	var l_prev_hz: float = 0.0
 	for i: int in BAR_COUNT:
-		var l_hz: float = (i+1) * FREQ_MAX / BAR_COUNT
-		var l_magnitude: float
-		var l_energy: float
-		var l_height: float
+		var l_hz: float = (i + 1) * FREQ_MAX / BAR_COUNT
+		var l_magnitude: float = spectrum.get_magnitude_for_frequency_range(l_prev_hz, l_hz).length()
+		var l_energy: float = clampf((MIN_DB + linear_to_db(l_magnitude)) / MIN_DB, 0 , 1)
+		var l_height: float = l_energy * size.y * 10
 	
 class Height:
 	var high: float
