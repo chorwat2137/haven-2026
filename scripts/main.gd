@@ -2,7 +2,7 @@ extends Node
 
 var triola_scene = preload("res://scenes/triola.tscn")
 var pocisk_scene = preload("res://scenes/pocisk.tscn")
-
+var lane_positions: Array[float] = []
 var obstacle_types := [triola_scene, pocisk_scene]
 var obstacles : Array
 var obstacle_heights = [200, 0, -200]
@@ -18,11 +18,19 @@ var last_obs
 func _ready() -> void:
 	screen_size = get_viewport().get_visible_rect().size
 
+	var center_y = screen_size.y / 2.0
+
+	lane_positions = [
+		center_y - 200,
+		center_y,
+		center_y + 200
+	]
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	speed = START_SPEED
-
+	
 	score += speed * delta * 60
 	$Player.position.x += speed * delta * 60
 	$Spectrum.position.x = $Player.position.x - screen_size.x /2
