@@ -1,5 +1,5 @@
 extends Area2D
-@onready var main = get_parent()
+
 
 
 

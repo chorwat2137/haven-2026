@@ -22,10 +22,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	speed = START_SPEED
-
-	score += speed * delta * 60
-	$Player.position.x += speed * delta * 60
-
+	score += speed
+	$Player.position.x += speed
+	print(score)
 	generate_obs()
 	
 func generate_obs():
