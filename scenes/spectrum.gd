@@ -35,6 +35,9 @@ func _update_spectrum_data() -> void:
 			heights[i].high = l_height
 		else:
 			heights[i].high	= lerp(heights[i].high, l_height, 0.1)
+			
+		if l_height <= 0.0:
+			heights[i].low = lerp(heights[i].low, l_height, 0.1)
 	
 class Height:
 	var high: float
