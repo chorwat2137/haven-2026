@@ -2,6 +2,9 @@
 
 [sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_j3pel"]
 resource_name = "LowPassFilter"
+cutoff_hz = 20500.0
+resonance = 1.0
+db = 3
 
 [resource]
 bus/0/effect/0/effect = SubResource("AudioEffectLowPassFilter_j3pel")
