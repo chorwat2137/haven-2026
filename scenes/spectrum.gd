@@ -1,4 +1,4 @@
-extends Node2D
+extends PanelContainer
 
 const BAR_COUNT: int = 20
 const FREQ_MAX: float = 11050.0
@@ -17,6 +17,9 @@ func _process(_delta: float) -> void:
 	
 func _draw() -> void:
 	pass
+	
+func _on_resized() -> void:
+	bar_width = size.x / BAR_COUNT
 	
 func _update_spectrum_data() -> void:
 	pass
