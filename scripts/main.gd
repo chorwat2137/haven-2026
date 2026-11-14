@@ -14,13 +14,18 @@ var lane_positions: Array[float] = []
 var obstacle_types := [triola_scene, pocisk_scene, sp1_scene, sp2_scene, sp3_scene, sp4_scene, sp5_scene, sp6_scene, sp7_scene, sp8_scene,]
 var obstacles : Array
 var obstacle_heights = [200, 0, -200]
+<<<<<<< HEAD
+=======
+var is_rewinding: bool = false
+>>>>>>> 164471a6f3d9b05dfee8a69f9083a98caf02ff3d
 
 var rewind_duration = 120
 var current_rewind = 121
 
 var speed: float
 const START_SPEED: float = 5.0
-const MAX_SPEED: int = 25
+const MAX_SPEED: float = 25.0
+var cur_speed: float = START_SPEED
 var screen_size: Vector2i
 var score = 0
 var last_obs
@@ -86,6 +91,7 @@ func hit_obs(body):
 	if body.name == "Player":
 		collision_handle()
 		
+<<<<<<< HEAD
 func collision_handle():
 	speed = -5
 	var timer = Timer.new()
@@ -96,4 +102,22 @@ func collision_handle():
 	timer.start()
 	
 func _on_timer_timeout():
+=======
+func collision_handle() -> void:
+
+	if is_rewinding:
+		return
+
+	is_rewinding = true
+
+	music.start_rewind()
+
+	speed = -START_SPEED*2
+
+	await get_tree().create_timer(1.0).timeout
+
+	music.stop_rewind()
+
+>>>>>>> 164471a6f3d9b05dfee8a69f9083a98caf02ff3d
 	speed = START_SPEED
+	is_rewinding = false
