@@ -8,7 +8,7 @@ var obstacles : Array
 var obstacle_heights = [200, 0, -200]
 
 
-@export var speed: float
+var speed: float
 const START_SPEED: float = 5.0
 const MAX_SPEED: int = 25
 var screen_size: Vector2i
@@ -16,16 +16,17 @@ var score = 0
 var last_obs
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	screen_size = get_window().size
-	pass
+	screen_size = get_viewport().get_visible_rect().size
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	speed = START_SPEED
-	score += speed
-	$Player.position.x += speed
-	print(score)
+
+	score += speed * delta * 60
+	$Player.position.x += speed * delta * 60
+	$Spectrum.position.x = $Player.position.x - screen_size.x /2
+	$Spectrum.position.y = $Player.position.y + screen_size.y /2
 	generate_obs()
 	
 func generate_obs():
