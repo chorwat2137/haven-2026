@@ -1,11 +1,15 @@
 extends Node
-
+@onready var music = get_node("AudioStreamPlayer")
 var triola_scene = preload("res://scenes/triola.tscn")
 var pocisk_scene = preload("res://scenes/pocisk.tscn")
 var lane_positions: Array[float] = []
 var obstacle_types := [triola_scene, pocisk_scene]
 var obstacles : Array
 var obstacle_heights = [200, 0, -200]
+var is_rewinding: bool = false
+
+var rewind_duration = 120
+var current_rewind = 121
 
 
 var speed: float
@@ -14,11 +18,15 @@ const MAX_SPEED: int = 25
 var screen_size: Vector2i
 var score = 0
 var last_obs
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	
+	
+	speed = START_SPEED
 	screen_size = get_viewport().get_visible_rect().size
-	$Player/Spectrum.position.x = 0 - screen_size.x /2
-	$Player/Spectrum.position.y = 0 - screen_size.y /2
+	$Player/Camera2D2/Spectrum.position.y = 0 - screen_size.y /2
 	var center_y = screen_size.y / 2.0
 
 	lane_positions = [
@@ -30,7 +38,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	speed = START_SPEED
 	
 	score += speed
 	$Player.position.x += speed * delta * 60
@@ -39,7 +46,7 @@ func _process(delta: float) -> void:
 	#$Spectrum.position.y = $Player.position.y - screen_size.y /2
 	generate_obs()
 
-var min_distance = 300
+var min_distance = 2000
 
 
 func generate_obs():
@@ -65,13 +72,28 @@ func generate_obs():
 
 func add_obs(obs, x, y):
 	obs.position = Vector2i(x, y)
+	obs.body_entered.connect(hit_obs)
 	add_child(obs)
 	obstacles.append(obs)
-	
+
 func hit_obs(body):
 	if body.name == "Player":
-		game_over()
+		collision_handle()
+		
+func collision_handle() -> void:
 
-func game_over():
-	get_tree().paused = true
-	#game_running = false
+	if is_rewinding:
+		return
+
+	is_rewinding = true
+
+	music.start_rewind()
+
+	speed = -START_SPEED
+
+	await get_tree().create_timer(2.0).timeout
+
+	music.stop_rewind()
+
+	speed = START_SPEED
+	is_rewinding = false

@@ -2,7 +2,7 @@ extends Node
 
 var timer : Timer
 
-var enemy = preload("res://scenes/enemy.tscn")
+var enemy = preload("res://old/enemy.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	timer = Timer.new()
