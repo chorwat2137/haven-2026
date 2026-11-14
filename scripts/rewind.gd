@@ -18,8 +18,6 @@ var total_frames: int = 0
 func _ready() -> void:
 	var wav := stream as AudioStreamWAV
 
-	print(stream.resource_path)
-	print(stream.format)
 
 	if wav == null:
 		push_error("Audio must be WAV!")
