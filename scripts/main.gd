@@ -80,16 +80,20 @@ func hit_obs(body):
 	if body.name == "Player":
 		collision_handle()
 		
-func collision_handle():
+func collision_handle() -> void:
+
+	if is_rewinding:
+		return
+
+	is_rewinding = true
+
 	music.start_rewind()
+
 	speed = -START_SPEED
-	var timer = Timer.new()
-	add_child(timer)
-	timer.wait_time = 2.0
-	timer.one_shot = false
-	timer.timeout.connect(_on_timer_timeout)
-	timer.start()
-	
-func _on_timer_timeout():
+
+	await get_tree().create_timer(2.0).timeout
+
 	music.stop_rewind()
+
 	speed = START_SPEED
+	is_rewinding = false
