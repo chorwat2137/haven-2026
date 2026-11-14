@@ -6,7 +6,7 @@ var lane_positions: Array[float] = []
 var obstacle_types := [triola_scene, pocisk_scene]
 var obstacles : Array
 var obstacle_heights = [200, 0, -200]
-
+var is_rewinding: bool = false
 
 var rewind_duration = 120
 var current_rewind = 121

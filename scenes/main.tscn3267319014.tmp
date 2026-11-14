@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bl1mp5us6ubqj"]
+
+[ext_resource type="Script" uid="uid://dr8cf3fux3q7n" path="res://scripts/main.gd" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://c61woxbidsqx" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://g1ip3d8jtu60" path="res://scenes/spectrum.tscn" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://duujhul7l6ncf" path="res://scripts/rewind.gd" id="3_tbgi4"]
+[ext_resource type="AudioStream" uid="uid://5y3mbq1d6jku" path="res://sfx/music/Ayahuasca - New Moon.wav" id="4_jyhfs"]
+
+[node name="Node" type="Node" unique_id=839730489]
+script = ExtResource("1_0wfyh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1628355729]
+stream = ExtResource("4_jyhfs")
+autoplay = true
+bus = &"Music"
+script = ExtResource("3_tbgi4")
+
+[node name="Linia" type="ColorRect" parent="." unique_id=1232044274]
+offset_left = -780.0
+offset_top = 240.0
+offset_right = -780.0
+offset_bottom = 240.0
+color = Color(0.8509804, 0.6313726, 1, 0)
+
+[node name="Linia2" type="ColorRect" parent="Linia" unique_id=1270531464]
+layout_mode = 0
+offset_right = 3430.0
+offset_bottom = 200.0
+color = Color(0.852, 0.63, 1, 0.7647059)
+
+[node name="Linia3" type="ColorRect" parent="Linia" unique_id=1715034830]
+layout_mode = 0
+offset_top = 200.0
+offset_right = 3430.0
+offset_bottom = 400.0
+color = Color(0.20026606, 0.81195885, 0.9795131, 0.7647059)
+
+[node name="Linia4" type="ColorRect" parent="Linia" unique_id=1620266623]
+layout_mode = 0
+offset_top = 400.0
+offset_right = 3430.0
+offset_bottom = 600.0
+color = Color(0.52649975, 0.83965874, 0.18535423, 0.7647059)
+
+[node name="Player" parent="." unique_id=2121710803 instance=ExtResource("1_o5qli")]
+
+[node name="Camera2D2" type="Camera2D" parent="Player" unique_id=2011008339]
+position = Vector2(454, 0)
+
+[node name="Spectrum" parent="Player/Camera2D2" unique_id=137574055 instance=ExtResource("3_sugp2")]
+z_index = -1
+offset_left = -960.0
+offset_right = -920.0
+offset_bottom = 40.0
