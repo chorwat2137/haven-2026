@@ -38,6 +38,9 @@ func _update_spectrum_data() -> void:
 			
 		if l_height <= 0.0:
 			heights[i].low = lerp(heights[i].low, l_height, 0.1)
+			
+		heights[i].actual = lerp(heights[i].low, heights[i].high, 0.1)
+		l_prev_hz = l_hz
 	
 class Height:
 	var high: float
