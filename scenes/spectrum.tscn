@@ -1,3 +1,8 @@
 [gd_scene format=3 uid="uid://g1ip3d8jtu60"]
 
-[node name="Object" type="Object" unique_id=1064026021]
+[ext_resource type="Script" uid="uid://b216yxp764dc4" path="res://scripts/spectrum.gd" id="1_pwr6l"]
+
+[node name="ColorRect" type="ColorRect" unique_id=969315619]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_pwr6l")
