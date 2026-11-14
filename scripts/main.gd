@@ -22,7 +22,7 @@ var rewind_duration = 120
 var current_rewind = 121
 
 var speed: float
-const START_SPEED: float = 5.0
+const START_SPEED: float = 10.0
 const MAX_SPEED: float = 25.0
 var cur_speed: float = START_SPEED
 var screen_size: Vector2i
@@ -56,7 +56,7 @@ func _process(delta: float) -> void:
 	#$Spectrum.position.y = $Player.position.y - screen_size.y /2
 	generate_obs()
 
-var min_distance = 2000
+var min_distance = 1000
 
 
 func generate_obs():
@@ -97,7 +97,7 @@ func collision_handle() -> void:
 		return
 
 	is_rewinding = true
-
+	$Player/Sprite2D.texture = load("res://gfx/player_back.png")
 	music.start_rewind()
 
 	speed = -START_SPEED*2
@@ -107,4 +107,5 @@ func collision_handle() -> void:
 	music.stop_rewind()
 
 	speed = START_SPEED
+	$Player/Sprite2D.texture = load("res://gfx/player_forward.png")
 	is_rewinding = false
