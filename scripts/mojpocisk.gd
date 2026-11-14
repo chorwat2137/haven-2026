@@ -3,6 +3,8 @@ extends Area2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	self.area_entered.connect(handle_delete)
+	var screen_size: Vector2i
+	screen_size = get_viewport().get_visible_rect().size
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
