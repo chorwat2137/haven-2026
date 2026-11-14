@@ -7,10 +7,10 @@ var current_lane: int = 1 # 0 = left, 1 = middle, 2 = right
 
 func _process(delta: float) -> void:
 	# Read keyboard input
-	if Input.is_action_just_pressed("ui_left"):
+	if Input.is_action_just_pressed("ui_up"):
 		current_lane = max(0, current_lane - 1)
 
-	if Input.is_action_just_pressed("ui_right"):
+	if Input.is_action_just_pressed("ui_down"):
 		current_lane = min(2, current_lane + 1)
 
 	# Calculate target X position
