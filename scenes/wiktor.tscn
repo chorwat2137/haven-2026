@@ -13,4 +13,5 @@ bus = &"Music"
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1297679371]
 offset_right = 1920.0
 offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
 script = ExtResource("2_ehwwu")
