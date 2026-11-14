@@ -1,8 +1,9 @@
 extends Node
 
 var triola_scene = preload("res://scenes/triola.tscn")
+var pocisk_scene = preload("res://scenes/pocisk.tscn")
 
-var obstacle_types := [triola_scene]
+var obstacle_types := [triola_scene, pocisk_scene]
 var obstacles : Array
 var obstacle_heights = [200, 0, -200]
 
