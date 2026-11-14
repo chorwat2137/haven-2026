@@ -9,11 +9,11 @@ script = ExtResource("1_0wfyh")
 
 [node name="Spectrum" parent="." unique_id=137574055 instance=ExtResource("3_sugp2")]
 
-[node name="ColorRect2" type="ColorRect" parent="Spectrum" unique_id=1398734596]
+[node name="Linia" type="ColorRect" parent="." unique_id=1398734596]
 offset_left = -780.0
 offset_top = 240.0
 offset_right = 2650.0
 offset_bottom = 840.0
-color = Color(0.46, 0.46, 0.46, 1)
+color = Color(0.6956399, 0.3441, 0.93, 0.6156863)
 
 [node name="Player" parent="." unique_id=2121710803 instance=ExtResource("1_o5qli")]
