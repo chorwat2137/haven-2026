@@ -48,8 +48,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if cur_speed < MAX_SPEED:
-		cur_speed += 0.01
+	if speed < MAX_SPEED:
+		speed += 0.01
 	score += speed
 	$Player.position.x += speed * delta * 60
 	#$Spectrum.position.x = $Player.position.x - screen_size.x /2
