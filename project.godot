@@ -12,7 +12,6 @@ config_version=5
 
 config/name="haven-2026"
 run/main_scene="uid://bqian8mpqp3rp"
-run/main_scene="uid://ciftw48npy2hw"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
