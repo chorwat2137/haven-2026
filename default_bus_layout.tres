@@ -4,9 +4,7 @@
 
 [sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_j3pel"]
 resource_name = "LowPassFilter"
-cutoff_hz = 1043.0
-resonance = 1.0
-db = 3
+cutoff_hz = 20500.0
 script = SubResource("GDScript_j3pel")
 
 [resource]
