@@ -1,6 +1,6 @@
 extends PanelContainer
 
-const BAR_COUNT: int = 20
+const BAR_COUNT: int = 32
 const FREQ_MAX: float = 11050.0
 const MIN_DB: int = 60
 
