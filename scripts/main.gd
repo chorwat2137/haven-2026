@@ -7,6 +7,8 @@ var obstacle_types := [triola_scene, pocisk_scene]
 var obstacles : Array
 var obstacle_heights = [200, 0, -200]
 
+var rewind_duration = 120
+var current_rewind = 121
 
 var speed: float
 const START_SPEED: float = 5.0
@@ -14,8 +16,13 @@ const MAX_SPEED: int = 25
 var screen_size: Vector2i
 var score = 0
 var last_obs
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	
+	
+	speed = START_SPEED
 	screen_size = get_viewport().get_visible_rect().size
 	$Player/Spectrum.position.x = 0 - screen_size.x /2
 	$Player/Spectrum.position.y = 0 - screen_size.y /2
@@ -30,7 +37,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	speed = START_SPEED
 	
 	score += speed
 	$Player.position.x += speed * delta * 60
@@ -39,7 +45,7 @@ func _process(delta: float) -> void:
 	#$Spectrum.position.y = $Player.position.y - screen_size.y /2
 	generate_obs()
 
-var min_distance = 300
+var min_distance = 2000
 
 
 func generate_obs():
@@ -65,5 +71,22 @@ func generate_obs():
 
 func add_obs(obs, x, y):
 	obs.position = Vector2i(x, y)
+	obs.body_entered.connect(hit_obs)
 	add_child(obs)
 	obstacles.append(obs)
+
+func hit_obs(body):
+	if body.name == "Player":
+		collision_handle()
+		
+func collision_handle():
+	speed = -5
+	var timer = Timer.new()
+	add_child(timer)
+	timer.wait_time = 2.0
+	timer.one_shot = false
+	timer.timeout.connect(_on_timer_timeout)
+	timer.start()
+	
+func _on_timer_timeout():
+	speed = START_SPEED
