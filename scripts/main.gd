@@ -37,5 +37,6 @@ func generate_obs():
 		var obs_x: int = screen_size.x + score + 100
 		var obs_y: int = screen_size.y / 2.0
 		last_obs = obs
+		obs.position = Vector2i(obs_x, obs_y)
 		add_child(obs)
 		obstacles.append(obs)
