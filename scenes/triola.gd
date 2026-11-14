@@ -1,4 +1,4 @@
-extends ColorRect
+extends Sprite2D
 
 var rng = RandomNumberGenerator.new()
 
