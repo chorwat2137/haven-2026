@@ -30,6 +30,11 @@ func _update_spectrum_data() -> void:
 		var l_magnitude: float = spectrum.get_magnitude_for_frequency_range(l_prev_hz, l_hz).length()
 		var l_energy: float = clampf((MIN_DB + linear_to_db(l_magnitude)) / MIN_DB, 0 , 1)
 		var l_height: float = l_energy * size.y * 10
+		
+		if l_height > heights[i].high:
+			heights[i].high = l_height
+		else:
+			heights[i].high	= lerp(heights[i].high, l_height, 0.1)
 	
 class Height:
 	var high: float
