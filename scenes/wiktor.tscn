@@ -8,6 +8,7 @@
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1928329307]
 stream = ExtResource("1_xa28d")
 autoplay = true
+bus = &"Music"
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1111174495]
 offset_left = 114.0
