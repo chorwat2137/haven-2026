@@ -11,7 +11,11 @@ config_version=5
 [application]
 
 config/name="haven-2026"
+<<<<<<< HEAD
 run/main_scene="uid://bqian8mpqp3rp"
+=======
+run/main_scene="uid://ciftw48npy2hw"
+>>>>>>> 79c1e5c (tutorial robiony)
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,6 +23,7 @@ config/icon="res://icon.svg"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+"<<<<<<<HEAD[dotnet]project/assembly_name"="haven-2026"
 
 [dotnet]
 
