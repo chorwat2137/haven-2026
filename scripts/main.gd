@@ -56,7 +56,7 @@ func _process(delta: float) -> void:
 	#$Spectrum.position.y = $Player.position.y - screen_size.y /2
 	generate_obs()
 
-var min_distance = 2000
+var min_distance = 1000
 
 
 func generate_obs():
