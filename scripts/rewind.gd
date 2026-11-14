@@ -3,84 +3,87 @@ extends AudioStreamPlayer
 
 @export var rewind_speed: float = 3.0
 
-var original_stream: AudioStreamWAV
-var original_data: PackedByteArray
-
+var audio_data: PackedByteArray
 var sample_rate: float
 var channels: int
-var current_sample: float = 0.0
 
+var sample_position: float = 0.0
 var rewinding: bool = false
 var playback: AudioStreamGeneratorPlayback
 
 
 func _ready() -> void:
-	# This implementation expects an uncompressed WAV.
-	original_stream = stream as AudioStreamWAV
+	var wav := stream as AudioStreamWAV
 
-	if original_stream == null:
-		push_error("Please use an AudioStreamWAV resource.")
+	if wav == null:
+		push_error("Audio must be WAV!")
 		return
 
-	original_data = original_stream.data
-	sample_rate = original_stream.mix_rate
-	channels = 2 if original_stream.stereo else 1
+	if wav.format != AudioStreamWAV.FORMAT_16_BITS:
+		push_error("WAV must use 16-bit PCM!")
+		return
 
-	stream = AudioStreamGenerator.new()
-	stream.mix_rate = sample_rate
-	stream.buffer_length = 0.2
+	audio_data = wav.data
+	sample_rate = wav.mix_rate
+	channels = 2 if wav.stereo else 1
 
+	var generator := AudioStreamGenerator.new()
+	generator.mix_rate = sample_rate
+	generator.buffer_length = 0.2
+
+	stream = generator
 	play()
 
-	playback = get_stream_playback() as AudioStreamGeneratorPlayback
+	playback = get_stream_playback()
+
+
+func start_rewind() -> void:
+	rewinding = true
+
+
+func stop_rewind() -> void:
+	rewinding = false
 
 
 func _process(_delta: float) -> void:
 	if playback == null:
 		return
 
-	if Input.is_action_just_pressed("rewind"):
-		rewinding = true
-
-	if Input.is_action_just_released("rewind"):
-		rewinding = false
-
-	fill_audio_buffer()
-
-
-func fill_audio_buffer() -> void:
-	var frames = playback.get_frames_available()
+	var frames := playback.get_frames_available()
 
 	for i in range(frames):
 		if rewinding:
-			current_sample -= rewind_speed
+			sample_position -= rewind_speed
 		else:
-			current_sample += 1.0
+			sample_position += 1.0
 
-		current_sample = clampf(
-			current_sample,
+		sample_position = clampf(
+			sample_position,
 			0.0,
-			float(original_data.size() / (channels * 2) - 1)
+			float(audio_data.size() / (channels * 2) - 1)
 		)
 
-		var left = get_sample(int(current_sample), 0)
-		var right = left
+		var left := read_interpolated(sample_position, 0)
+		var right := left
 
 		if channels == 2:
-			right = get_sample(int(current_sample), 1)
+			right = read_interpolated(sample_position, 1)
 
 		playback.push_frame(Vector2(left, right))
 
 
-func get_sample(index: int, channel: int) -> float:
-	var offset = (index * channels + channel) * 2
+func read_interpolated(pos: float, channel: int) -> float:
+	var index_a := int(floor(pos))
+	var index_b := mini(index_a + 1, audio_data.size() / (channels * 2) - 1)
 
-	var value = original_data.decode_s16(offset)
+	var fraction := pos - float(index_a)
 
-	return float(value) / 32768.0
+	var a := read_sample(index_a, channel)
+	var b := read_sample(index_b, channel)
 
-func start_rewind() -> void:
-	rewinding = true
+	return lerpf(a, b, fraction)
 
-func stop_rewind() -> void:
-	rewinding = false
+
+func read_sample(index: int, channel: int) -> float:
+	var offset := (index * channels + channel) * 2
+	return float(audio_data.decode_s16(offset)) / 32768.0
