@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5y3mbq1d6jku"
+path="res://.godot/imported/Ayahuasca - New Moon.wav-14edab76c0cec6578253708690179de2.sample"
+
+[deps]
+
+source_file="res://sfx/music/Ayahuasca - New Moon.wav"
+dest_files=["res://.godot/imported/Ayahuasca - New Moon.wav-14edab76c0cec6578253708690179de2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
