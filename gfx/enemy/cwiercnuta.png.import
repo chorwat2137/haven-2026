@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hn84l5c2qmye"
-path="res://.godot/imported/osemki.png-a9bdf8023be045468f8200766c4db39e.ctex"
+uid="uid://rjq3j2ixkw01"
+path="res://.godot/imported/cwiercnuta.png-f8cec49e04acde529fea20f831d8389f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gfx/osemki.png"
-dest_files=["res://.godot/imported/osemki.png-a9bdf8023be045468f8200766c4db39e.ctex"]
+source_file="res://gfx/enemy/cwiercnuta.png"
+dest_files=["res://.godot/imported/cwiercnuta.png-f8cec49e04acde529fea20f831d8389f.ctex"]
 
 [params]
 

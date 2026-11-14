@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brtp85d0sjl7a"
-path="res://.godot/imported/New Piskel.png-425dd3c7fca0dd6b5476f95c880d7ca3.ctex"
+uid="uid://dohpukrg4lywo"
+path="res://.godot/imported/szesnastki.png-48679c3e07519abaaf041a656bd5ef50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gfx/New Piskel.png"
-dest_files=["res://.godot/imported/New Piskel.png-425dd3c7fca0dd6b5476f95c880d7ca3.ctex"]
+source_file="res://gfx/enemy/szesnastki.png"
+dest_files=["res://.godot/imported/szesnastki.png-48679c3e07519abaaf041a656bd5ef50.ctex"]
 
 [params]
 
