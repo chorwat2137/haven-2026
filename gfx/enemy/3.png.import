@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1607duv32lmk"
-path="res://.godot/imported/osem_i_szes.png-6d34578cc6793e034c239d9427896bc2.ctex"
+uid="uid://brtp85d0sjl7a"
+path="res://.godot/imported/3.png-5caa8feef11dca3027548a59d238039c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gfx/enemy/osem_i_szes.png"
-dest_files=["res://.godot/imported/osem_i_szes.png-6d34578cc6793e034c239d9427896bc2.ctex"]
+source_file="res://gfx/enemy/3.png"
+dest_files=["res://.godot/imported/3.png-5caa8feef11dca3027548a59d238039c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci14lmlkijc1a"
-path="res://.godot/imported/szesnastka.png-151f1d9f990400ed8040fb06070d6e2f.ctex"
+uid="uid://hn84l5c2qmye"
+path="res://.godot/imported/5.png-7ea9400de4f88b6a922c8cdd2387445d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gfx/enemy/szesnastka.png"
-dest_files=["res://.godot/imported/szesnastka.png-151f1d9f990400ed8040fb06070d6e2f.ctex"]
+source_file="res://gfx/enemy/5.png"
+dest_files=["res://.godot/imported/5.png-7ea9400de4f88b6a922c8cdd2387445d.ctex"]
 
 [params]
 

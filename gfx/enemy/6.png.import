@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hn84l5c2qmye"
-path="res://.godot/imported/osemki.png-51a3c6d14d02bc99b7beb273a7c816ba.ctex"
+uid="uid://1607duv32lmk"
+path="res://.godot/imported/6.png-6e064430961c1479998630b9e8f3e23f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gfx/enemy/osemki.png"
-dest_files=["res://.godot/imported/osemki.png-51a3c6d14d02bc99b7beb273a7c816ba.ctex"]
+source_file="res://gfx/enemy/6.png"
+dest_files=["res://.godot/imported/6.png-6e064430961c1479998630b9e8f3e23f.ctex"]
 
 [params]
 
