@@ -5,7 +5,7 @@
 
 [node name="Node2D" type="Node2D" unique_id=725913305]
 
-[node name="Enemy" type="CharacterBody2D" parent="." unique_id=1779240352]
+[node name="Enemy" type="CharacterBody2D" parent="." unique_id=1779240352 groups=["mobs"]]
 scale = Vector2(5, 5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemy" unique_id=1739146719]
