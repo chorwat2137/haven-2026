@@ -14,6 +14,7 @@ stream = ExtResource("2_tbgi4")
 autoplay = true
 bus = &"Music"
 script = ExtResource("3_tbgi4")
+rewind_speed = 1.0
 
 [node name="Linia" type="ColorRect" parent="." unique_id=1232044274]
 offset_left = -780.0
