@@ -16,4 +16,5 @@ offset_right = 2009.0
 offset_bottom = 840.0
 color = Color(0.46, 0.46, 0.46, 1)
 
-[node name="Player" parent="." unique_id=2121710803 instance=ExtResource("1_o5qli")]
+[node name="Player" parent="ColorRect" unique_id=2121710803 instance=ExtResource("1_o5qli")]
+position = Vector2(627, 300)
