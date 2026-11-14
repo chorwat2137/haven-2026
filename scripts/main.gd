@@ -50,7 +50,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if speed < MAX_SPEED:
 		speed += 0.01
-	score += cur_speed
+		cur_speed = speed
+	score += speed
 	$Player.position.x += speed * delta * 60
 	#$Spectrum.position.x = $Player.position.x - screen_size.x /2
 	$Linia.position.x = $Player.position.x - screen_size.x /2
