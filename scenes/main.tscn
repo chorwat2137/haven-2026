@@ -10,5 +10,3 @@ script = ExtResource("1_0wfyh")
 [node name="Spectrum" parent="." unique_id=137574055 instance=ExtResource("3_sugp2")]
 
 [node name="Player" parent="." unique_id=2121710803 instance=ExtResource("1_o5qli")]
-lane_distance = null
-movement_speed = null
