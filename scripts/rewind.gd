@@ -52,7 +52,7 @@ func _ready() -> void:
 	# Replace stream with generator
 	var generator := AudioStreamGenerator.new()
 	generator.mix_rate = sample_rate
-	generator.buffer_length = 0.2
+	generator.buffer_length = 0.05
 
 	stream = generator
 	play()
