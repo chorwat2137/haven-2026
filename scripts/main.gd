@@ -16,7 +16,7 @@ var score = 0
 var last_obs
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Spectrum.position.x = $Player.position.x - screen_size.x /2
+		$Spectrum.position.x = $Player.position.x - screen_size.x /2
 	$Linia.position.x = $Player.position.x - screen_size.x/2
 	screen_size = get_viewport().get_visible_rect().size
 
@@ -35,8 +35,8 @@ func _process(delta: float) -> void:
 	
 	score += speed
 	$Player.position.x += speed * delta * 60
-	$Spectrum.position.x = speed * delta * 60
-	$Linia.position.x = speed * delta * 60
+	$Spectrum.position.x = $Player.position.x - screen_size.x /2
+	$Linia.position.x = $Player.position.x - screen_size.x/2
 	$Spectrum.position.y = $Player.position.y - screen_size.y /2
 	generate_obs()
 
