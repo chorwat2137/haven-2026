@@ -2,22 +2,22 @@ extends Node
 @onready var music = get_node("AudioStreamPlayer")
 var triola_scene = preload("res://scenes/triola.tscn")
 var pocisk_scene = preload("res://scenes/pocisk.tscn")
+var sp1_scene = preload("res://scenes/sp1.tscn")
+var sp2_scene = preload("res://scenes/sp2.tscn")
+var sp3_scene = preload("res://scenes/sp3.tscn")
+var sp4_scene = preload("res://scenes/sp4.tscn")
+var sp5_scene = preload("res://scenes/sp5.tscn")
+var sp6_scene = preload("res://scenes/sp6.tscn")
+var sp7_scene = preload("res://scenes/sp7.tscn")
+var sp8_scene = preload("res://scenes/sp8.tscn")
 var lane_positions: Array[float] = []
-var obstacle_types := [triola_scene, pocisk_scene]
+var obstacle_types := [triola_scene, pocisk_scene, sp1_scene, sp2_scene, sp3_scene, sp4_scene, sp5_scene, sp6_scene, sp7_scene, sp8_scene,]
 var obstacles : Array
 var obstacle_heights = [200, 0, -200]
 
-<<<<<<< HEAD
 var rewind_duration = 120
 var current_rewind = 121
 
-=======
-
-var rewind_duration = 120
-var current_rewind = 121
-
-
->>>>>>> c204fe1b6c1d0a5662e870097bdc7f1d4faca8c7
 var speed: float
 const START_SPEED: float = 5.0
 const MAX_SPEED: int = 25
@@ -87,8 +87,7 @@ func hit_obs(body):
 		collision_handle()
 		
 func collision_handle():
-	music.start_rewind()
-	speed = -START_SPEED
+	speed = -5
 	var timer = Timer.new()
 	add_child(timer)
 	timer.wait_time = 2.0
@@ -97,5 +96,4 @@ func collision_handle():
 	timer.start()
 	
 func _on_timer_timeout():
-	music.stop_rewind()
 	speed = START_SPEED

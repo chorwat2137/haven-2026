@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bjoxph1x1gaw2"]
+
+[ext_resource type="Texture2D" uid="uid://hn84l5c2qmye" path="res://gfx/enemy/5.png" id="1_vhccs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f7mvp"]
+radius = 47.0
+
+[node name="Triola" type="Area2D" unique_id=307245731]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1819449505]
+texture_filter = 1
+position = Vector2(17.999998, 8.999999)
+scale = Vector2(5, 5)
+texture = ExtResource("1_vhccs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=496647538]
+position = Vector2(-1, 9)
+shape = SubResource("CircleShape2D_f7mvp")
