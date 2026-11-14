@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bs3xnf5jf4rxq"]
 
 [ext_resource type="Texture2D" uid="uid://o5fo44flu0cg" path="res://gfx/triola.png" id="1_4whtt"]
-[ext_resource type="Script" uid="uid://c8o5oegpr5l1p" path="res://triola.gd" id="1_qrvsx"]
+[ext_resource type="Script" uid="uid://c8o5oegpr5l1p" path="res://scenes/triola.gd" id="1_qrvsx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f7mvp"]
 radius = 47.0
