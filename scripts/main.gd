@@ -39,15 +39,21 @@ func _process(delta: float) -> void:
 	
 func generate_obs():
 	if obstacles.is_empty() or last_obs.position.x < score + randi_range(300, 500):
+
 		var obs_type = obstacle_types[randi() % obstacle_types.size()]
-		var obs
+
 		var max_obs = 2
-		for i in range(randi() % max_obs + 1):
-			obs = obs_type.instantiate()
-			var obs_height = obs.get_node("Sprite2D").texture.get_height()
-			var obs_scale = obs.get_node("Sprite2D").scale
-			var obs_x: int = screen_size.x + score + 100
-			var obs_y: float = lane_positions[randi() % lane_positions.size()]
+		var obs_count = randi_range(1, max_obs)
+
+		var available_lanes = [0, 1, 2]
+		available_lanes.shuffle()
+
+		for i in range(obs_count):
+			var obs = obs_type.instantiate()
+
+			var obs_x: float = screen_size.x + score + 100
+			var obs_y: float = lane_positions[available_lanes[i]]
+
 			last_obs = obs
 			add_obs(obs, obs_x, obs_y)
 
