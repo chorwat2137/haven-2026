@@ -67,3 +67,11 @@ func add_obs(obs, x, y):
 	obs.position = Vector2i(x, y)
 	add_child(obs)
 	obstacles.append(obs)
+	
+func hit_obs(body):
+	if body.name == "Player":
+		game_over()
+
+func game_over():
+	get_tree().paused = true
+	#game_running = false
