@@ -1,12 +1,18 @@
 extends CharacterBody2D
 
 var lane_positions: Array[float] = []
-
+var bullet = preload("res://scenes/mojpocisk.tscn")
 @export var movement_speed: float = 10.0
 
 var current_lane: int = 1 # 0 = top, 1 = middle, 2 = bottom
 var center_y: float
 
+func shoot():
+	var b = bullet.instantiate()
+	var b_y = get_parent().position.y
+	var b_x = get_parent().position.x
+	b.position = Vector2i(b_x, b_y)
+	get_parent().add_child(b)
 
 func _ready() -> void:
 	# Get vertical center of the screen
@@ -24,7 +30,8 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
 	# Keyboard input
 	if Input.is_action_just_pressed("ui_up"):
 		current_lane = max(0, current_lane - 1)
