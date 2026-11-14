@@ -10,17 +10,26 @@ var bar_width: float = 0.0
 	 
 func _ready() -> void:
 	spectrum = AudioServer.get_bus_effect_instance(0, 0)
+	_on_resized()
 	for i: int in BAR_COUNT:
 		heights.append(Height.new())
 	
 func _process(_delta: float) -> void:
 	_update_spectrum_data()
-	_draw()
+	queue_redraw()
 	
 func _draw() -> void:
 	for i: int in BAR_COUNT:
 		var l_color: Color = Color.from_hsv((BAR_COUNT * 0.6 + i * 0.5) / BAR_COUNT, 0.5, 0.6)
-	
+		var l_rect: Rect2 = Rect2(
+			i * bar_width,					#pos x
+			size.y - heights[i].actual,			#pos y
+			bar_width - 2,			# width
+			heights[i].actual # height
+		)
+		draw_rect(l_rect, l_color)
+		
+		
 func _on_resized() -> void:
 	bar_width = size.x / BAR_COUNT
 	
