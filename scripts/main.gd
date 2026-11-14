@@ -83,15 +83,20 @@ func generate_obs():
 func add_obs(obs, x, y):
 	obs.position = Vector2i(x, y)
 	obs.body_entered.connect(hit_obs)
+
 	add_child(obs)
 	obstacles.append(obs)
 
-func hit_obs(body):
+func hit_obs(body, obs):
 	if body.name == "Player":
-		collision_handle()
+		player_collision_handle()
+	if body.name == "Pocisk":
+		print("zderzenie")
 		
+#func del_bullets(body):
+	#if body.name == "Player" && body.position.x < 
 
-func collision_handle() -> void:
+func player_collision_handle() -> void:
 
 	if is_rewinding:
 		return
