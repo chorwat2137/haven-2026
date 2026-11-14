@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var lane_distance: float = 200.0
+var lane_positions: Array[float] = []
 @export var movement_speed: float = 10.0
 
 var current_lane: int = 1 # 0 = top, 1 = middle, 2 = bottom
@@ -10,8 +10,13 @@ func _ready() -> void:
 	# Get vertical center of the screen
 	center_y = get_viewport_rect().size.y / 2.0
 
-	# Start in the middle of the screen
-	position.y = center_y
+	lane_positions = [
+		center_y - 200,
+		center_y,
+		center_y + 200
+	]
+
+	position.y = lane_positions[current_lane]
 
 
 func _process(delta: float) -> void:
