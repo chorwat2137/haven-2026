@@ -14,6 +14,6 @@ offset_left = -780.0
 offset_top = 240.0
 offset_right = 2650.0
 offset_bottom = 840.0
-color = Color(0.6956399, 0.3441, 0.93, 0.6156863)
+color = Color(0.852, 0.63, 1, 0.7647059)
 
 [node name="Player" parent="." unique_id=2121710803 instance=ExtResource("1_o5qli")]
