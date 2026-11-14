@@ -20,7 +20,11 @@ func _process(_delta: float) -> void:
 func _draw() -> void:
 	for i: int in BAR_COUNT:
 		var l_color: Color = Color.from_hsv((BAR_COUNT * 0.6 + i * 0.5) / BAR_COUNT, 0.5, 0.6)
-	
+		var l_rect: Rect2 = Rect2(
+			i * bar_width
+		)
+		
+		
 func _on_resized() -> void:
 	bar_width = size.x / BAR_COUNT
 	
