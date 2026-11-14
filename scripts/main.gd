@@ -22,7 +22,7 @@ var rewind_duration = 120
 var current_rewind = 121
 
 var speed: float
-const START_SPEED: float = 5.0
+const START_SPEED: float = 10.0
 const MAX_SPEED: float = 25.0
 var cur_speed: float = START_SPEED
 var screen_size: Vector2i
