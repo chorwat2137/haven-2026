@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://rvj0gr7220mv"]
 
 [ext_resource type="AudioStream" uid="uid://5y3mbq1d6jku" path="res://sfx/music/Ayahuasca - New Moon.wav" id="1_xa28d"]
-[ext_resource type="Script" uid="uid://b216yxp764dc4" path="res://scenes/spectrum.gd" id="2_ehwwu"]
 
 [node name="Node2D" type="Node2D" unique_id=137574055]
 
@@ -9,15 +8,3 @@
 stream = ExtResource("1_xa28d")
 autoplay = true
 bus = &"Music"
-
-[node name="Control" type="Control" parent="." unique_id=1593695371]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=1111174495]
-layout_mode = 0
-offset_right = 500.0
-offset_bottom = 500.0
-script = ExtResource("2_ehwwu")

@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Polygon2D
 
 const BAR_COUNT: int = 32
 const FREQ_MAX: float = 11050.0
