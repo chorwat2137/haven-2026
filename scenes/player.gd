@@ -20,10 +20,6 @@ func _physics_process(delta: float) -> void:
 		position.y -= 100
 	if Input.is_action_just_pressed("track_down") and not is_on_floor():
 		position.y += 100
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> 1c0d654eee313b6a9d95523474a7549ffc0b113f
 	move_and_slide()
 "res://scenes/bullet.tscn"

@@ -6,9 +6,11 @@
 [node name="Node2D" type="Node2D" unique_id=725913305]
 
 [node name="Enemy" type="CharacterBody2D" parent="." unique_id=1779240352]
+scale = Vector2(5, 5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemy" unique_id=1739146719]
 texture = ExtResource("1_md0e3")
 script = ExtResource("1_7p1mj")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemy" unique_id=267278756]
+polygon = PackedVector2Array(-4.7999997, 5.3999996, 0, 5.7999997, 0.39999998, -6.2, -4.6, -5.5999994)
