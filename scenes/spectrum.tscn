@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://g1ip3d8jtu60"]
 
+[ext_resource type="AudioStream" uid="uid://5y3mbq1d6jku" path="res://sfx/music/Ayahuasca - New Moon.wav" id="1_xa28d"]
 [ext_resource type="Script" uid="uid://b216yxp764dc4" path="res://scripts/spectrum.gd" id="2_ehwwu"]
 
 [node name="ColorRect" type="ColorRect" unique_id=1064026021]
@@ -7,3 +8,7 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.654902, 0.91764706, 0.84313726, 1)
 script = ExtResource("2_ehwwu")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1159309138]
+stream = ExtResource("1_xa28d")
+autoplay = true
