@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 	generate_obs()
 	
 func generate_obs():
-	if obstacles.is_empty():
+	if obstacles.is_empty() or last_obs.position.x < score + randi_range(300, 500):
 		var obs_type = obstacle_types[randi() % obstacle_types.size()]
 		var obs
 		obs = obs_type.instantiate()
@@ -37,6 +37,10 @@ func generate_obs():
 		var obs_x: int = screen_size.x + score + 100
 		var obs_y: int = screen_size.y / 2.0 + obstacle_heights[randi() % obstacle_heights.size()]
 		last_obs = obs
-		obs.position = Vector2i(obs_x, obs_y)
-		add_child(obs)
-		obstacles.append(obs)
+		add_obs(obs, obs_x, obs_y)
+
+
+func add_obs(obs, x, y):
+	obs.position = Vector2i(x, y)
+	add_child(obs)
+	obstacles.append(obs)
