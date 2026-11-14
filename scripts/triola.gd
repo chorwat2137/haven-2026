@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Area2D
 
 var rng = RandomNumberGenerator.new()
 
@@ -7,7 +7,7 @@ func _ready() -> void:
 	print(random)
 
 	var file = "res://gfx/enemy/%d.png" % random
-	texture = load(file)
+	$Sprite2D.texture = load(file)
 
 func _process(delta: float) -> void:
 	pass

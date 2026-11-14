@@ -14,7 +14,9 @@ var lane_positions: Array[float] = []
 var obstacle_types := [triola_scene, pocisk_scene, sp1_scene, sp2_scene, sp3_scene, sp4_scene, sp5_scene, sp6_scene, sp7_scene, sp8_scene,]
 var obstacles : Array
 var obstacle_heights = [200, 0, -200]
+
 var is_rewinding: bool = false
+
 
 var rewind_duration = 120
 var current_rewind = 121
@@ -88,7 +90,6 @@ func hit_obs(body):
 	if body.name == "Player":
 		collision_handle()
 		
-	
 
 func collision_handle() -> void:
 
