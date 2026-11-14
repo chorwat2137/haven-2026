@@ -8,7 +8,7 @@ var obstacle_heights = [100, 0, -100]
 
 
 var speed: float
-const START_SPEED: float = 10.0
+const START_SPEED: float = 5.0
 const MAX_SPEED: int = 25
 var screen_size: Vector2i
 var score = 0
