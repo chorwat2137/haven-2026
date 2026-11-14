@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b3romaq0wo0c7"]
 
-[ext_resource type="Texture2D" uid="uid://o5fo44flu0cg" path="res://gfx/triola.png" id="1_iglvf"]
+[ext_resource type="Texture2D" uid="uid://clyt4x42bgmmh" path="res://gfx/bullet.png" id="1_iglvf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f7mvp"]
 radius = 47.0
