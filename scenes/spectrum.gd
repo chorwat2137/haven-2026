@@ -10,6 +10,8 @@ var bar_width: float = 0.0
 	 
 func _ready() -> void:
 	spectrum = AudioServer.get_bus_effect_instance(0, 0)
+	for i: int in BAR_COUNT:
+		heights.append(Height.new())
 	
 func _process(_delta: float) -> void:
 	_update_spectrum_data()
@@ -22,7 +24,12 @@ func _on_resized() -> void:
 	bar_width = size.x / BAR_COUNT
 	
 func _update_spectrum_data() -> void:
-	pass
+	var l_prev_hz: float = 0.0
+	for i: int in BAR_COUNT:
+		var l_hz: float = (i+1) * FREQ_MAX / BAR_COUNT
+		var l_magnitude: float
+		var l_energy: float
+		var l_height: float
 	
 class Height:
 	var high: float
