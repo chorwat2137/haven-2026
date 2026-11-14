@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1607duv32lmk"
-path="res://.godot/imported/osem_i_szes.png-5de4199ddd087b0dba48af9886ef73b4.ctex"
+path="res://.godot/imported/osem_i_szes.png-6d34578cc6793e034c239d9427896bc2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gfx/osem_i_szes.png"
-dest_files=["res://.godot/imported/osem_i_szes.png-5de4199ddd087b0dba48af9886ef73b4.ctex"]
+source_file="res://gfx/enemy/osem_i_szes.png"
+dest_files=["res://.godot/imported/osem_i_szes.png-6d34578cc6793e034c239d9427896bc2.ctex"]
 
 [params]
 

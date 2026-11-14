@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci14lmlkijc1a"
-path="res://.godot/imported/szesnastka.png-12f076c146073f20cd03d8a0eeacd43f.ctex"
+uid="uid://bm0qcfa2y3ghf"
+path="res://.godot/imported/klucz_wiolinowy.png-de4da176ef8182b5ba56792a9bc3187d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gfx/szesnastka.png"
-dest_files=["res://.godot/imported/szesnastka.png-12f076c146073f20cd03d8a0eeacd43f.ctex"]
+source_file="res://gfx/enemy/klucz_wiolinowy.png"
+dest_files=["res://.godot/imported/klucz_wiolinowy.png-de4da176ef8182b5ba56792a9bc3187d.ctex"]
 
 [params]
 

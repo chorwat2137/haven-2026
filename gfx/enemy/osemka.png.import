@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3yh0x7bg0gtv"
-path="res://.godot/imported/osemka.png-905413cae6ff7feded79fc9d61fe5399.ctex"
+path="res://.godot/imported/osemka.png-e7308c77cd910198b78410842ee4f742.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gfx/osemka.png"
-dest_files=["res://.godot/imported/osemka.png-905413cae6ff7feded79fc9d61fe5399.ctex"]
+source_file="res://gfx/enemy/osemka.png"
+dest_files=["res://.godot/imported/osemka.png-e7308c77cd910198b78410842ee4f742.ctex"]
 
 [params]
 

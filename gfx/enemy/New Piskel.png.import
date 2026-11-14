@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm0qcfa2y3ghf"
-path="res://.godot/imported/klucz_wiolinowy.png-73064c419f7ca1c8b458d684ec13297f.ctex"
+uid="uid://brtp85d0sjl7a"
+path="res://.godot/imported/New Piskel.png-c0f971d1e639b1a3cfda8325256a8926.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gfx/klucz_wiolinowy.png"
-dest_files=["res://.godot/imported/klucz_wiolinowy.png-73064c419f7ca1c8b458d684ec13297f.ctex"]
+source_file="res://gfx/enemy/New Piskel.png"
+dest_files=["res://.godot/imported/New Piskel.png-c0f971d1e639b1a3cfda8325256a8926.ctex"]
 
 [params]
 
