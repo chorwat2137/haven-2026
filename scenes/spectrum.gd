@@ -9,7 +9,7 @@ var heights: Array[Height] = []
 var bar_width: float = 0.0
 	 
 func _ready() -> void:
-	spectrum = AudioServer.get_bus_effect_instance(0, 0)
+	spectrum = AudioServer.get_bus_effect_instance(1, 0)
 	_on_resized()
 	for i: int in BAR_COUNT:
 		heights.append(Height.new())
