@@ -14,10 +14,7 @@ var lane_positions: Array[float] = []
 var obstacle_types := [triola_scene, pocisk_scene, sp1_scene, sp2_scene, sp3_scene, sp4_scene, sp5_scene, sp6_scene, sp7_scene, sp8_scene,]
 var obstacles : Array
 var obstacle_heights = [200, 0, -200]
-<<<<<<< HEAD
-=======
 var is_rewinding: bool = false
->>>>>>> 164471a6f3d9b05dfee8a69f9083a98caf02ff3d
 
 var rewind_duration = 120
 var current_rewind = 121
@@ -91,18 +88,8 @@ func hit_obs(body):
 	if body.name == "Player":
 		collision_handle()
 		
-<<<<<<< HEAD
-func collision_handle():
-	speed = -5
-	var timer = Timer.new()
-	add_child(timer)
-	timer.wait_time = 2.0
-	timer.one_shot = false
-	timer.timeout.connect(_on_timer_timeout)
-	timer.start()
 	
-func _on_timer_timeout():
-=======
+
 func collision_handle() -> void:
 
 	if is_rewinding:
@@ -118,6 +105,5 @@ func collision_handle() -> void:
 
 	music.stop_rewind()
 
->>>>>>> 164471a6f3d9b05dfee8a69f9083a98caf02ff3d
 	speed = START_SPEED
 	is_rewinding = false
