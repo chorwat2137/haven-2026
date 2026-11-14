@@ -10,9 +10,14 @@ stream = ExtResource("1_xa28d")
 autoplay = true
 bus = &"Music"
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1111174495]
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 1151.0
-offset_bottom = 672.0
+[node name="Control" type="Control" parent="." unique_id=1593695371]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=1111174495]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 500.0
 script = ExtResource("2_ehwwu")
