@@ -4,7 +4,7 @@ var triola_scene = preload("res://scenes/triola.tscn")
 
 var obstacle_types := [triola_scene]
 var obstacles : Array
-var obstacle_heights = [100, 0, -100]
+var obstacle_heights = [200, 0, -200]
 
 
 var speed: float
