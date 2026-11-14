@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 		current_lane = min(2, current_lane + 1)
 
 	# Calculate target position
-	var target_y = center_y + (current_lane - 1) * lane_distance
+	var target_y = 
 
 	# Smooth movement
 	position.y = lerp(
