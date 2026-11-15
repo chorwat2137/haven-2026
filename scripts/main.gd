@@ -124,7 +124,7 @@ func hit_obs(body):
 
 func invincibility():
 	invincible = true
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(2.0).timeout
 	invincible = false
 func collision_handle() -> void:
 
@@ -136,9 +136,9 @@ func collision_handle() -> void:
 	music.start_rewind()
 
 	speed = -abs(START_SPEED*2)
-
-	await get_tree().create_timer(1.0).timeout
 	invincibility()
+	await get_tree().create_timer(1.0).timeout
+
 	music.stop_rewind()
 
 	speed = START_SPEED
