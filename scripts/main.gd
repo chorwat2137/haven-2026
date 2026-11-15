@@ -35,6 +35,7 @@ var cur_speed: float = START_SPEED
 
 var screen_size: Vector2i
 var score = 0
+var high_score = 0
 var last_obs
 
 var min_distance = 1000
@@ -46,7 +47,7 @@ func _ready() -> void:
 	speed = START_SPEED
 	screen_size = get_viewport().get_visible_rect().size
 
-	$Player/Camera2D2/Spectrum.position.y = -screen_size.y / 2
+	$Player/Camera2D2/Spectrum.position.y = float(-screen_size.y) / 2
 
 	var center_y = screen_size.y / 2.0
 
@@ -65,9 +66,11 @@ func _process(delta: float) -> void:
 		speed += 0.05
 
 	score += speed
+	show_score()
+	
 	$Player.position.x += speed * delta * 60
 
-	$Linia.position.x = $Player.position.x - screen_size.x / 2
+	$Linia.position.x = $Player.position.x - float(screen_size.x) / 2
 
 	for heart in hp_on_screen:
 		if is_instance_valid(heart):
@@ -76,6 +79,11 @@ func _process(delta: float) -> void:
 
 	generate_obs()
 
+func show_score():
+	if score > high_score:
+		high_score = score
+	$HUD.get_node("HighScoreLabel").text = "HIGH SCORE: " + str(int(high_score/100))
+	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(int(score/100))
 
 func add_hearts():
 	for i in range(3):

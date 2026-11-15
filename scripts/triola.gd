@@ -10,5 +10,5 @@ func _ready() -> void:
 	$Sprite2D.texture = load(file)
 	
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass

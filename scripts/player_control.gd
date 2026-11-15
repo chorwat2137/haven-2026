@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+var pause = false
 var lane_positions: Array[float] = []
 var bullet = preload("res://scenes/mojpocisk.tscn")
 @export var movement_speed: float = 10.0
@@ -43,11 +44,20 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
 	# Keyboard input
-	if Input.is_action_just_pressed("ui_up"):
+	if Input.is_action_just_pressed("track_up"):
 		current_lane = max(0, current_lane - 1)
 
-	if Input.is_action_just_pressed("ui_down"):
+	if Input.is_action_just_pressed("track_down"):
 		current_lane = min(2, current_lane + 1)
+	if Input.is_action_just_pressed("pause"):
+		
+		pause = !pause
+		get_tree().paused = pause
+
+		if pause:
+			$Sprite2D.texture = load("res://gfx/player_stop.png")
+		else:
+			$Sprite2D.texture = load("res://gfx/player_forward.png")
 
 	# Get target Y position
 	var target_y: float = lane_positions[current_lane]
