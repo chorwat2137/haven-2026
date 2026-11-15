@@ -144,12 +144,10 @@ func hit_obs(body):
 
 
 func invincibility():
-	#if invincible == true:
-		#return
 	$Player/Shine.show_sprite()
 	invincible = true
 
-	await get_tree().create_timer(2.0).timeouts
+	await get_tree().create_timer(2.0).timeout
 
 	if not is_inside_tree():
 		return
