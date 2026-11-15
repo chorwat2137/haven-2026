@@ -47,7 +47,7 @@ func _ready() -> void:
 
 
 func add_hearts():
-	for i in range(3):
+	for i in range(hp):
 		var h = hp_t.instantiate()
 		h.global_position = Vector2(
 			$heart_spawner.position.x + 100 * i,
