@@ -12,11 +12,11 @@ func _physics_process(delta):
 	position.x += speed * delta
 	screen_size = get_viewport().get_visible_rect().size
 
-func _on_body_entered(body):
-	if body.is_in_group("obstacle"):
-		
-		body.queue_free()
-		queue_free()
+#func _on_body_entered(body):
+	#if body.is_in_group("obstacle"):
+		#
+		#body.queue_free()
+		#queue_free()
 			
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

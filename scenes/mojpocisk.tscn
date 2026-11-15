@@ -23,7 +23,6 @@ shape = SubResource("CircleShape2D_f7mvp")
 visible = false
 stream = ExtResource("3_vxg0f")
 volume_db = 2.643
-autoplay = true
 max_polyphony = 2
 bus = &"SFX"
 
