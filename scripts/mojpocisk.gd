@@ -27,9 +27,6 @@ func _process(_delta: float) -> void:
 func handle_delete(area):
 
 	area.die()
-	if hit_sound.stream != null:
 
-	else:
-		print("No audio stream assigned!")
 
 	self.queue_free()
