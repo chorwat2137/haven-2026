@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bpuc14tjuyyth"]
+
+[ext_resource type="Script" uid="uid://brqisgdg4wios" path="res://scenes/restart.gd" id="1_q5shd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7dg1w"]
+bg_color = Color(0.7585879, 0.54588866, 0.70420504, 1)
+corner_radius_top_left = 30
+corner_radius_bottom_right = 30
+corner_detail = 1
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lyatw"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_bottom_right = 30
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjb2t"]
+bg_color = Color(0.76, 0.29639998, 0.63637346, 1)
+corner_radius_top_left = 30
+corner_radius_bottom_right = 30
+corner_detail = 1
+
+[node name="Restart" type="Control" unique_id=1223389969]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q5shd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1901841771]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -353.5
+offset_top = -252.0
+offset_right = 353.5
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.0800003)
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=652113223]
+layout_mode = 2
+theme_override_font_sizes/font_size = 120
+text = "GAME OVER"
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=627571990]
+layout_mode = 2
+size_flags_vertical = 3
+offset_transform_enabled = true
+theme_override_constants/h_separation = 30
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_7dg1w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lyatw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sjb2t")
+text = "RESTART"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -17,8 +17,9 @@ func _on_body_entered(body):
 		queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position.x += get_parent().speed * 2
-	if position.x < get_parent().get_node("Player").position.x or position.x > get_parent().get_node("Player").position.x + screen_size.x:
+	position.x += get_parent().speed * 1.5
+	if position.x  < get_parent().get_node("Player").position.x:
+		print("zmywam się stąd")
 		self.queue_free()
 	
 func handle_delete(area):
