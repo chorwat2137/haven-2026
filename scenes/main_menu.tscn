@@ -62,11 +62,12 @@ theme_override_constants/separation = 80
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=506221285]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
 theme_override_fonts/font = ExtResource("3_bqqt6")
 theme_override_font_sizes/font_size = 180
-text = "TILEMASTER2000"
+text = "NOTE DESTROYER 2000"
 
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=1063866426]
 layout_mode = 2
