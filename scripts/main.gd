@@ -61,7 +61,7 @@ func _process(delta: float) -> void:
 		return
 
 	if speed < MAX_SPEED and not is_rewinding:
-		speed += 0.05
+		speed += 0.1
 
 	score += speed
 	show_score()
