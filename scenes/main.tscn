@@ -45,6 +45,7 @@ color = Color(0.64, 0.64, 0.64, 0.7647059)
 
 [node name="Player" parent="." unique_id=2121710803 instance=ExtResource("1_o5qli")]
 process_mode = 3
+shoot_delay = 2.0
 
 [node name="Camera2D2" type="Camera2D" parent="Player" unique_id=2011008339]
 position = Vector2(459, 0)
