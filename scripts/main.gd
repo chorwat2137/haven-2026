@@ -120,7 +120,7 @@ func hit_obs(body):
 			get_tree().paused = true
 		collision_handle()
 	elif body.name == "Player" and is_rewinding == true:
-		score -= 100
+		score -= 1000
 		
 
 	
