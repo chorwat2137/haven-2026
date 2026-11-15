@@ -9,6 +9,7 @@ func _ready() -> void:
 
 
 func die():
+	$CollisionShape2D.set_deferred("disabled", true)
 	timer_disappear.start()
 	$Sprite2D.visible = false
 	$AnimatedSprite2D.visible = true

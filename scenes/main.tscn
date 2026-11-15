@@ -9,7 +9,6 @@
 
 [node name="Node" type="Node" unique_id=839730489]
 script = ExtResource("1_0wfyh")
-rewind_duration = 1.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1628355729]
 stream = ExtResource("2_tbgi4")
@@ -29,21 +28,21 @@ color = Color(0.8509804, 0.6313726, 1, 0)
 layout_mode = 0
 offset_right = 3430.0
 offset_bottom = 200.0
-color = Color(0.44, 0.44, 0.44, 0.7647059)
+color = Color(0.99514014, 0, 0.38973284, 0.7647059)
 
 [node name="Linia3" type="ColorRect" parent="Linia" unique_id=1715034830]
 layout_mode = 0
 offset_top = 200.0
 offset_right = 3430.0
 offset_bottom = 400.0
-color = Color(1, 0.7, 0.7799999, 0.7647059)
+color = Color(0.9624019, 0.6476131, 0, 0.7647059)
 
 [node name="Linia4" type="ColorRect" parent="Linia" unique_id=1620266623]
 layout_mode = 0
 offset_top = 400.0
 offset_right = 3430.0
 offset_bottom = 600.0
-color = Color(0.96, 0.90511996, 0.48959997, 0.7647059)
+color = Color(0.43949986, 0.43, 1, 0.7647059)
 
 [node name="Player" parent="." unique_id=2121710803 instance=ExtResource("1_o5qli")]
 process_mode = 3
