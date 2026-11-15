@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://g1ip3d8jtu60"]
 
+[ext_resource type="Texture2D" uid="uid://dhbxd0ab4ltmu" path="res://gfx/bg_main.jpg" id="1_08c88"]
 [ext_resource type="Script" uid="uid://b216yxp764dc4" path="res://scripts/spectrum.gd" id="1_pwr6l"]
 
 [node name="TextureRect" type="TextureRect" unique_id=1982861665]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 2560.0
+offset_bottom = 1600.0
+texture = ExtResource("1_08c88")
 script = ExtResource("1_pwr6l")
