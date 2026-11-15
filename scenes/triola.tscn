@@ -58,6 +58,7 @@ texture = ExtResource("1_4whtt")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=496647538]
 position = Vector2(-1, 9)
 shape = SubResource("CircleShape2D_f7mvp")
+disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1804403163]
 visible = false
