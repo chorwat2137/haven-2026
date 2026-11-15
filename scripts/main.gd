@@ -39,9 +39,11 @@ var last_obs
 
 var min_distance = 1000
 
-
+func calculate_value(input: float) -> float:
+	return 1000.0 + (input - 5.0) * (1000.0 / 15.0)
+	
 func _ready() -> void:
-
+	min_distance = calculate_value(speed)
 	speed = START_SPEED
 	screen_size = get_viewport().get_visible_rect().size
 
