@@ -56,7 +56,7 @@ offset_top = -540.0
 offset_right = 1191.0
 offset_bottom = 540.0
 
-[node name="HUD" parent="." unique_id=1111737151 instance=ExtResource("6_tefeu")]
+[node name="heart_spawner" type="Marker2D" parent="Player/Camera2D2" unique_id=588003124]
+position = Vector2(-917, -413)
 
-[node name="heart_spawner" type="Marker2D" parent="HUD" unique_id=588003124]
-position = Vector2(42, 127)
+[node name="HUD" parent="." unique_id=1111737151 instance=ExtResource("6_tefeu")]
