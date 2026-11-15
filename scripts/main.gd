@@ -89,7 +89,7 @@ func show_score():
 	if score > high_score:
 		high_score = score
 		Highscore.highscore = high_score
-	$HUD.get_node("HighScoreLabel").text = "HIGH SCORE: " + str(int(high_score/100))
+	$HUD.get_node("HighScoreLabel").text = "HIGH SCORE: " + str(Highscore.highscore)
 	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(int(score/100))
 
 
