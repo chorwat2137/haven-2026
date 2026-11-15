@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cdqq14okybsn0"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1111737151]
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=2059264087]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 171.0
+offset_bottom = 79.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 45
+text = "SCORE:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HighScoreLabel" type="Label" parent="." unique_id=1215975734]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -296.0
+offset_top = 16.0
+offset_right = -15.0
+offset_bottom = 79.0
+grow_horizontal = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 45
+text = "HIGH SCORE:"
+horizontal_alignment = 1
+vertical_alignment = 1

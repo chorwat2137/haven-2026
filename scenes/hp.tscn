@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dfua8gg4wsaex"]
 
-[ext_resource type="Texture2D" uid="uid://dgoudmm8p22ja" path="res://gfx/heart.png" id="1_al052"]
+[ext_resource type="Texture2D" uid="uid://bycdob1q0hvdu" path="res://gfx/player_back.png" id="1_al052"]
 
 [node name="Hp" type="Node2D" unique_id=1543579974]
 

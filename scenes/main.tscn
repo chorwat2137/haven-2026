@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://cv8hd8tabbd81" path="res://sfx/music/new-moon.wav" id="2_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://g1ip3d8jtu60" path="res://scenes/spectrum.tscn" id="3_sugp2"]
 [ext_resource type="Script" uid="uid://duujhul7l6ncf" path="res://scripts/rewind.gd" id="3_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://cdqq14okybsn0" path="res://scenes/hud.tscn" id="6_tefeu"]
 
 [node name="Node" type="Node" unique_id=839730489]
 script = ExtResource("1_0wfyh")
@@ -47,6 +48,7 @@ offset_bottom = 600.0
 color = Color(0.52649975, 0.83965874, 0.18535423, 0.7647059)
 
 [node name="Player" parent="." unique_id=2121710803 instance=ExtResource("1_o5qli")]
+process_mode = 3
 
 [node name="Camera2D2" type="Camera2D" parent="Player" unique_id=2011008339]
 position = Vector2(459, 0)
@@ -57,3 +59,5 @@ offset_left = -1030.0
 offset_top = -540.0
 offset_right = 951.0
 offset_bottom = 540.0
+
+[node name="HUD" parent="." unique_id=1111737151 instance=ExtResource("6_tefeu")]
