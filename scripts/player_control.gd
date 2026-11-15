@@ -9,7 +9,7 @@ var current_lane: int = 1 # 0 = top, 1 = middle, 2 = bottom
 var center_y: float
 var can_shoot: bool = true
 var shoot_timer = Timer.new()
-var shoot_delay: float = 1.0
+var shoot_delay: float = 0.1
 
 func shoot():
 	if can_shoot:
