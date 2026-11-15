@@ -24,7 +24,7 @@ var game_over = false
 
 var hp_on_screen: Array = []
 
-var rewind_duration: float = 3.0
+var rewind_duration: float = 1.5
 
 var speed: float
 const START_SPEED: float = 5.0
