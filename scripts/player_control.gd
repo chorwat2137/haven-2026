@@ -42,13 +42,13 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_pressed("shoot") and pause == false:
 		shoot()
 	# Keyboard input
-	if Input.is_action_just_pressed("track_up"):
+	if Input.is_action_just_pressed("track_up") and pause == false:
 		current_lane = max(0, current_lane - 1)
 
-	if Input.is_action_just_pressed("track_down"):
+	if Input.is_action_just_pressed("track_down") and pause == false:
 		current_lane = min(2, current_lane + 1)
 	if Input.is_action_just_pressed("pause"):
 		
