@@ -93,7 +93,7 @@ func show_score():
 
 
 func generate_obs():
-	if obstacles.is_empty() or last_obs == null or last_obs.position.x < score + min_distance + randi_range(0,100):
+	if obstacles.is_empty() or last_obs == null or last_obs.position.x < $Player.position.x + min_distance + randi_range(0,100):
 
 		var obs_type = obstacle_types[randi() % obstacle_types.size()]
 		var max_obs = 1
@@ -107,7 +107,7 @@ func generate_obs():
 		for i in range(obs_count):
 			var obs = obs_type.instantiate()
 
-			var obs_x: float = screen_size.x + score + 100
+			var obs_x: float = screen_size.x + $Player.position.x + 100
 			var obs_y: float = lane_positions[available_lanes[i]]
 
 			last_obs = obs
