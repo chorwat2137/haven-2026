@@ -67,7 +67,7 @@ func _process(delta: float) -> void:
 		return
 	min_distance = calculate_value(speed)
 	if speed < MAX_SPEED and not is_rewinding:
-		speed += 0.1
+		speed += 0.05
 
 	score += speed
 	show_score()
