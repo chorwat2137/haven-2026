@@ -29,7 +29,7 @@ var current_rewind = 121
 
 var speed: float
 const START_SPEED: float = 10.0
-const MAX_SPEED: float = 25.0
+const MAX_SPEED: float = 50.0
 var cur_speed: float = START_SPEED
 
 var screen_size: Vector2i
@@ -61,7 +61,7 @@ func _process(delta: float) -> void:
 		return
 
 	if speed < MAX_SPEED and not is_rewinding:
-		speed += 0.05
+		speed += 0.1
 
 	score += speed
 	show_score()
@@ -120,6 +120,7 @@ func hit_obs(body):
 		$Player.hp_on_screen[body.hp].queue_free()
 
 	if body.hp <= 0:
+		print("ded")
 		game_over = true
 		#get_tree().paused = true
 		get_tree().change_scene_to_file.call_deferred("res://scenes/restart.tscn")
