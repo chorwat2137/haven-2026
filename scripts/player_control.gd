@@ -6,19 +6,28 @@ var bullet = preload("res://scenes/mojpocisk.tscn")
 @export var hp: int = 3
 var current_lane: int = 1 # 0 = top, 1 = middle, 2 = bottom
 var center_y: float
+var can_shoot: bool = true
+var shoot_timer = Timer.new()
 
 func shoot():
-	var b = bullet.instantiate()
-	var b_y = self.position.y
-	var b_x = self.position.x
-	b.position = Vector2i(b_x, b_y)
-	get_parent().add_child(b)
-	
+	if can_shoot:
+		var b = bullet.instantiate()
+		var b_y = self.position.y
+		var b_x = self.position.x
+		b.position = Vector2i(b_x, b_y)
+		get_parent().add_child(b)
+		add_child(shoot_timer)
+		shoot_timer.start()
+		can_shoot = false
 
+func reload():
+	can_shoot = true
+	#shoot_timer.queue_free()
 func _ready() -> void:
 	# Get vertical center of the screen
 	center_y = get_viewport_rect().size.y / 2.0
-
+	shoot_timer.wait_time = 5.0
+	shoot_timer.timeout.connect(reload)
 	# Define the three lanes
 	lane_positions = [
 		center_y - 200,
