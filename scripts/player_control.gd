@@ -71,13 +71,13 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
 		
 		pause = !pause
-		get_tree().paused = pause
+
 		
 		if pause:
 			$Sprite2D.texture = load("res://gfx/player_stop.png")
 		else:
 			$Sprite2D.texture = load("res://gfx/player_forward.png")
-
+		get_tree().paused = pause
 	# Get target Y position
 	var target_y: float = lane_positions[current_lane]
 
