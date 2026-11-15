@@ -13,6 +13,7 @@ func _ready() -> void:
 	$Sprite2D.texture = load(file)
 	
 func die():
+	
 	timer_disappear.start()
 	$CollisionShape2D.set_deferred("disabled", true)
 	$Sprite2D.visible = false
