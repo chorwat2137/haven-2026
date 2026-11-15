@@ -89,6 +89,7 @@ func show_score():
 		Highscore.save_game()
 	$HUD.get_node("HighScoreLabel").text = "HIGH SCORE: " + str(int(Highscore.highscore/100))
 	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(int(score/100))
+	$HUD.get_node("SpeedLabel").text = "SPEED: " + str(int(speed))
 
 
 func generate_obs():

@@ -14,6 +14,22 @@ text = "SCORE:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="ScoreLabel2" type="Label" parent="." unique_id=463841363]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = 16.0
+offset_right = 75.0
+offset_bottom = 79.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 45
+text = "SPEED:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="HighScoreLabel" type="Label" parent="." unique_id=1215975734]
 anchors_preset = 1
 anchor_left = 1.0
