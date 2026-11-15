@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://b4qe4wxdinmks" path="res://scripts/shine.gd" id="3_dqkch"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f7mvp"]
-radius = 65.00769
+radius = 82.0
 
 [node name="Player" type="CharacterBody2D" unique_id=2121710803]
 position = Vector2(500, 540)
@@ -22,11 +22,12 @@ script = ExtResource("3_dqkch")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1054903404]
 process_mode = 1
 texture_filter = 1
-position = Vector2(-4, -5.9999924)
-scale = Vector2(8.375, 4.4062505)
+position = Vector2(-3, -19.000008)
+scale = Vector2(8.375, 9.046876)
 texture = ExtResource("2_g2els")
 
 [node name="Coll" type="CollisionShape2D" parent="." unique_id=60537568]
+position = Vector2(6, -4)
 shape = SubResource("CircleShape2D_f7mvp")
 
 [node name="Timer" type="Timer" parent="." unique_id=63438959]
