@@ -48,7 +48,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
+	if cur_speed < MAX_SPEED:
+		cur_speed += 0.01
 	score += speed
 	$Player.position.x += speed * delta * 60
 	#$Spectrum.position.x = $Player.position.x - screen_size.x /2
@@ -60,7 +61,7 @@ var min_distance = 1000
 
 
 func generate_obs():
-	if obstacles.is_empty() or last_obs.position.x < score + min_distance:
+	if obstacles.is_empty() or last_obs == null or last_obs.position.x < score + min_distance:
 
 		var obs_type = obstacle_types[randi() % obstacle_types.size()]
 
@@ -72,7 +73,7 @@ func generate_obs():
 
 		for i in range(obs_count):
 			var obs = obs_type.instantiate()
-
+			
 			var obs_x: float = screen_size.x + score + 100
 			var obs_y: float = lane_positions[available_lanes[i]]
 
@@ -82,6 +83,7 @@ func generate_obs():
 
 func add_obs(obs, x, y):
 	obs.position = Vector2i(x, y)
+	obs.add_to_group("obsticles")
 	obs.body_entered.connect(hit_obs)
 
 	add_child(obs)
@@ -89,14 +91,13 @@ func add_obs(obs, x, y):
 
 func hit_obs(body, obs):
 	if body.name == "Player":
-		player_collision_handle()
-	if body.name == "Pocisk":
-		print("zderzenie")
+		collision_handle()
+
 		
 #func del_bullets(body):
-	#if body.name == "Player" && body.position.x < 
-
-func player_collision_handle() -> void:
+	#if body.name == "Player" && bo m    0dy.position.x < 
+	
+func collision_handle() -> void:
 
 	if is_rewinding:
 		return
