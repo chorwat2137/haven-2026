@@ -58,3 +58,5 @@ position = Vector2(2.25, -1.75)
 scale = Vector2(1.1, 1.1)
 sprite_frames = SubResource("SpriteFrames_qhdfn")
 animation = &"death"
+
+[node name="Timer" type="Timer" parent="Area2D" unique_id=260792547]

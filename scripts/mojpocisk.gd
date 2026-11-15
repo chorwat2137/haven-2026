@@ -22,5 +22,5 @@ func _process(_delta: float) -> void:
 		self.queue_free()
 	
 func handle_delete(area):
-	area.queue_free()
+	area.die()
 	self.queue_free()
