@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://r71t7rc2y3mt" path="res://gfx/animation-death/fr8.png" id="10_w8n6q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f7mvp"]
-radius = 47.0
+radius = 62.008064
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3w0b4"]
 animations = [{
@@ -51,8 +51,8 @@ script = ExtResource("1_ofmn1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1819449505]
 texture_filter = 1
-position = Vector2(17.999998, 8.999999)
-scale = Vector2(5, 5)
+position = Vector2(7.999999, 2.9999995)
+scale = Vector2(7.874999, 7.624999)
 texture = ExtResource("1_adp15")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=496647538]
