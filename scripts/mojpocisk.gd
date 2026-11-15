@@ -19,10 +19,8 @@ func _on_body_entered(body):
 func _process(_delta: float) -> void:
 	position.x += get_parent().speed * 1.5
 	if position.x  < get_parent().get_node("Player").position.x:
-		print("zmywam się stąd")
 		self.queue_free()
 	
 func handle_delete(area):
-	print("kolizja")
 	area.queue_free()
 	self.queue_free()

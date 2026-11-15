@@ -54,7 +54,6 @@ func add_hearts():
 
 		add_child(h)
 		hp_on_screen.append(h)
-		print("dodano hp")
 
 
 func _process(delta: float) -> void:
