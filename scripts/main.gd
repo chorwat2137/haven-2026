@@ -112,15 +112,14 @@ func add_obs(obs, x, y):
 	obstacles.append(obs)
 
 func hit_obs(body):
-	if body.name == "Player" and is_rewinding == false:
+	if body.name == "Player":
 		body.hp -= 1
 		if hp_on_screen[body.hp]:
 			hp_on_screen[body.hp].queue_free()
 		if body.hp <= 0:
 			get_tree().paused = true
 		collision_handle()
-	elif body.name == "Player" and is_rewinding == true:
-		$Player.position.x -= lerp($Player.position.x, $Player.position.x-500, 1)
+		
 		
 
 	
