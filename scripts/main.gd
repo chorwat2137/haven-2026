@@ -125,6 +125,7 @@ func add_obs(obs, x, y):
 func hit_obs(body):
 	if body.name == "Player" and invincible == false:
 		body.hp -= 1
+		$Player.hp_on_screen[body.hp]
 		$Player.hp_on_screen[body.hp].queue_free()
 
 	if body.hp <= 0:

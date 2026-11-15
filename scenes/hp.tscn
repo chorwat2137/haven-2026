@@ -1,11 +1,60 @@
 [gd_scene format=3 uid="uid://dfua8gg4wsaex"]
 
 [ext_resource type="Texture2D" uid="uid://bycdob1q0hvdu" path="res://gfx/player_back.png" id="1_al052"]
+[ext_resource type="Script" uid="uid://xyxph2tiqaqn" path="res://scripts/hp.gd" id="1_jchhy"]
+[ext_resource type="Texture2D" uid="uid://du1ss44g0pp47" path="res://gfx/animation-death/fr1.png" id="2_lbjo8"]
+[ext_resource type="Texture2D" uid="uid://vaywqjmgdg23" path="res://gfx/animation-death/fr2.png" id="3_jchhy"]
+[ext_resource type="Texture2D" uid="uid://bfmjc4tionvhi" path="res://gfx/animation-death/fr3.png" id="4_q0wvd"]
+[ext_resource type="Texture2D" uid="uid://h10gfe5lsqnd" path="res://gfx/animation-death/fr4.png" id="5_5pou4"]
+[ext_resource type="Texture2D" uid="uid://b6s8xkcpldm1s" path="res://gfx/animation-death/fr5.png" id="6_3dfnb"]
+[ext_resource type="Texture2D" uid="uid://c5sfwkmnr6qpk" path="res://gfx/animation-death/fr6.png" id="7_gr87b"]
+[ext_resource type="Texture2D" uid="uid://da8tfmboa7ru6" path="res://gfx/animation-death/fr7.png" id="8_6oh18"]
+[ext_resource type="Texture2D" uid="uid://r71t7rc2y3mt" path="res://gfx/animation-death/fr8.png" id="9_rbi33"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qhdfn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lbjo8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jchhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q0wvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5pou4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3dfnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gr87b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6oh18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rbi33")
+}],
+"loop": 1,
+"name": &"death",
+"speed": 12.0
+}]
 
 [node name="Hp" type="Node2D" unique_id=1543579974]
+script = ExtResource("1_jchhy")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1350316488]
 scale = Vector2(4, 4)
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=612492977]
 texture = ExtResource("1_al052")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=2044642213]
+visible = false
+position = Vector2(2.25, -1.75)
+scale = Vector2(1.1, 1.1)
+sprite_frames = SubResource("SpriteFrames_qhdfn")
+animation = &"death"
