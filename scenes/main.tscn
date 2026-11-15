@@ -14,6 +14,7 @@ script = ExtResource("1_0wfyh")
 stream = ExtResource("2_tefeu")
 volume_db = -80.0
 autoplay = true
+max_polyphony = 2
 bus = &"Music"
 script = ExtResource("3_tbgi4")
 
