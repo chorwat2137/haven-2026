@@ -112,7 +112,7 @@ func add_obs(obs, x, y):
 	obstacles.append(obs)
 
 func hit_obs(body):
-	if body.name == "Player":
+	if body.name == "Player" and invincible == false:
 		body.hp -= 1
 		if hp_on_screen[body.hp]:
 			hp_on_screen[body.hp].queue_free()
