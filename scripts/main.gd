@@ -145,7 +145,9 @@ func hit_obs(body):
 
 func invincibility():
 	if invincible == true:
+		print("i run")
 		return
+		
 	$Player/Shine.show_sprite()
 	invincible = true
 
