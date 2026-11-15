@@ -4,7 +4,7 @@ var pause = false
 var lane_positions: Array[float] = []
 var bullet = preload("res://scenes/mojpocisk.tscn")
 @export var movement_speed: float = 30.0
-@export var hp: int = 3
+@export var hp: int = 5
 var current_lane: int = 1 # 0 = top, 1 = middle, 2 = bottom
 var center_y: float
 var can_shoot: bool = true
