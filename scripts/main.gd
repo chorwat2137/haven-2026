@@ -97,7 +97,7 @@ func generate_obs():
 
 		var obs_type = obstacle_types[randi() % obstacle_types.size()]
 		var max_obs = 1
-		if randi_range(0,1):
+		if randi_range(0,2):
 			max_obs = 2
 		var obs_count = randi_range(1, max_obs)
 
