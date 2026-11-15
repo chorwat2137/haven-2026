@@ -89,6 +89,7 @@ func show_score():
 	if score > high_score:
 		high_score = score
 		Highscore.highscore = high_score
+		Highscore.save_game()
 	$HUD.get_node("HighScoreLabel").text = "HIGH SCORE: " + str(int(Highscore.highscore/100))
 	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(int(score/100))
 
@@ -133,7 +134,7 @@ func hit_obs(body):
 		print("ded")
 		game_over = true
 		#get_tree().paused = true
-		Highscore.save_game()
+		
 		get_tree().change_scene_to_file.call_deferred("res://scenes/restart.tscn")
 		return
 
