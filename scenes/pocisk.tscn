@@ -2,9 +2,49 @@
 
 [ext_resource type="Script" uid="uid://c4ipb8majaw4u" path="res://scripts/pocisk.gd" id="1_bpw4h"]
 [ext_resource type="Texture2D" uid="uid://clyt4x42bgmmh" path="res://gfx/bullet.png" id="1_iglvf"]
+[ext_resource type="Texture2D" uid="uid://du1ss44g0pp47" path="res://gfx/animation-death/fr1.png" id="3_srgyp"]
+[ext_resource type="Texture2D" uid="uid://vaywqjmgdg23" path="res://gfx/animation-death/fr2.png" id="4_lguc1"]
+[ext_resource type="Texture2D" uid="uid://bfmjc4tionvhi" path="res://gfx/animation-death/fr3.png" id="5_cvec2"]
+[ext_resource type="Texture2D" uid="uid://h10gfe5lsqnd" path="res://gfx/animation-death/fr4.png" id="6_wuor8"]
+[ext_resource type="Texture2D" uid="uid://b6s8xkcpldm1s" path="res://gfx/animation-death/fr5.png" id="7_uw26b"]
+[ext_resource type="Texture2D" uid="uid://c5sfwkmnr6qpk" path="res://gfx/animation-death/fr6.png" id="8_ahsmf"]
+[ext_resource type="Texture2D" uid="uid://da8tfmboa7ru6" path="res://gfx/animation-death/fr7.png" id="9_3rtd7"]
+[ext_resource type="Texture2D" uid="uid://r71t7rc2y3mt" path="res://gfx/animation-death/fr8.png" id="10_k35p1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f7mvp"]
 radius = 29.068884
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ue5k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_srgyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lguc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cvec2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wuor8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uw26b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ahsmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3rtd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_k35p1")
+}],
+"loop": 1,
+"name": &"death",
+"speed": 12.0
+}]
 
 [node name="Pocisk" type="Area2D" unique_id=307245731]
 script = ExtResource("1_bpw4h")
@@ -17,3 +57,10 @@ texture = ExtResource("1_iglvf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=496647538]
 shape = SubResource("CircleShape2D_f7mvp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2112430304]
+visible = false
+position = Vector2(2.25, -1.75)
+scale = Vector2(1.1, 1.1)
+sprite_frames = SubResource("SpriteFrames_7ue5k")
+animation = &"death"

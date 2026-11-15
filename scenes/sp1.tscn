@@ -1,11 +1,53 @@
 [gd_scene format=3 uid="uid://y0v7vo3lc567"]
 
+[ext_resource type="Script" uid="uid://bymo5m66erb2y" path="res://scripts/sp_1.gd" id="1_366nc"]
 [ext_resource type="Texture2D" uid="uid://rjq3j2ixkw01" path="res://gfx/enemy/1.png" id="1_qunh6"]
+[ext_resource type="Texture2D" uid="uid://du1ss44g0pp47" path="res://gfx/animation-death/fr1.png" id="3_l8sed"]
+[ext_resource type="Texture2D" uid="uid://vaywqjmgdg23" path="res://gfx/animation-death/fr2.png" id="4_kiib1"]
+[ext_resource type="Texture2D" uid="uid://bfmjc4tionvhi" path="res://gfx/animation-death/fr3.png" id="5_7g334"]
+[ext_resource type="Texture2D" uid="uid://h10gfe5lsqnd" path="res://gfx/animation-death/fr4.png" id="6_jrq0s"]
+[ext_resource type="Texture2D" uid="uid://b6s8xkcpldm1s" path="res://gfx/animation-death/fr5.png" id="7_leo5l"]
+[ext_resource type="Texture2D" uid="uid://c5sfwkmnr6qpk" path="res://gfx/animation-death/fr6.png" id="8_jtnwf"]
+[ext_resource type="Texture2D" uid="uid://da8tfmboa7ru6" path="res://gfx/animation-death/fr7.png" id="9_5lfoq"]
+[ext_resource type="Texture2D" uid="uid://r71t7rc2y3mt" path="res://gfx/animation-death/fr8.png" id="10_pyk2n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f7mvp"]
 radius = 47.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_2mxok"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_l8sed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kiib1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7g334")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jrq0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_leo5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jtnwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5lfoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pyk2n")
+}],
+"loop": 1,
+"name": &"death",
+"speed": 12.0
+}]
+
 [node name="Triola" type="Area2D" unique_id=307245731]
+script = ExtResource("1_366nc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1819449505]
 texture_filter = 1
@@ -16,3 +58,12 @@ texture = ExtResource("1_qunh6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=496647538]
 position = Vector2(-1, 9)
 shape = SubResource("CircleShape2D_f7mvp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2127694491]
+visible = false
+position = Vector2(2.25, -1.75)
+scale = Vector2(1.1, 1.1)
+sprite_frames = SubResource("SpriteFrames_2mxok")
+animation = &"death"
+
+[node name="Timer" type="Timer" parent="." unique_id=1535805395]

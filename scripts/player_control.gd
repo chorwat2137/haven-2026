@@ -53,10 +53,11 @@ func add_hearts():
 			$heart_spawner.position.x + 100 * i,
 			$heart_spawner.position.y
 		)
-
 		add_child(h)
 		hp_on_screen.append(h)
-
+		
+func hp_dead(index):
+	hp_on_screen[index].die()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("shoot") and pause == false:
