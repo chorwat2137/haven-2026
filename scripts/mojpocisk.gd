@@ -1,7 +1,6 @@
 extends Area2D
 
 @export var speed: float = 800.0
-@onready var hit_sound: AudioStreamPlayer2D = $HitSound
 var screen_size: Vector2i
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
