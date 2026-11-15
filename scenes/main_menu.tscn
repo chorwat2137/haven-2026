@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bpiqg3idm5vsm"]
 
 [ext_resource type="Script" uid="uid://d11d37iuc8a34" path="res://scripts/main_menu.gd" id="1_l6cm7"]
-[ext_resource type="Texture2D" uid="uid://0u30kfjni7po" path="res://gfx/tlo startu.png" id="2_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://tikexy2vase7" path="res://gfx/bg_menu.jpg" id="2_bqqt6"]
 [ext_resource type="FontFile" uid="uid://ckbopv8mt6i20" path="res://gfx/GrapeSoda.ttf" id="3_bqqt6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk65j"]
@@ -40,9 +40,9 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TloStartu" type="Sprite2D" parent="Panel" unique_id=226709484]
-position = Vector2(1042.7501, 541.25)
-scale = Vector2(1.0862429, 1.067621)
-texture = ExtResource("2_ekxnf")
+position = Vector2(1042.7501, 466.26382)
+scale = Vector2(0.89550775, 0.9738883)
+texture = ExtResource("2_bqqt6")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1028378248]
 layout_mode = 1
@@ -62,6 +62,8 @@ theme_override_constants/separation = 80
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=506221285]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
 theme_override_fonts/font = ExtResource("3_bqqt6")
 theme_override_font_sizes/font_size = 180
 text = "TILEMASTER2000"
