@@ -12,7 +12,6 @@ var shoot_timer = Timer.new()
 @export var shoot_delay: float = 0.5
 var hp_t = preload("res://scenes/hp.tscn")
 var hp_on_screen: Array = []
-var score = 0
 
 func shoot():
 	if can_shoot:
@@ -61,7 +60,6 @@ func hp_dead(index):
 	hp_on_screen[index].die()
 
 func _process(delta: float) -> void:
-	show_score()
 	if Input.is_action_just_pressed("shoot") and pause == false:
 		shoot()
 	# Keyboard input
@@ -77,7 +75,6 @@ func _process(delta: float) -> void:
 		
 		if pause:
 			$Sprite2D.texture = load("res://gfx/player_stop.png")
-			get_parent().score -= 10
 		else:
 			$Sprite2D.texture = load("res://gfx/player_forward.png")
 
@@ -90,10 +87,3 @@ func _process(delta: float) -> void:
 		target_y,
 		1.0 - exp(-movement_speed * delta)
 	)
-func show_score():
-	if score > Highscore.highscore:
-		Highscore.highscore = score
-		Highscore.save_game()
-	get_parent().get_node("HUD").get_node("HighScoreLabel").text = "HIGH SCORE: " + str(int(Highscore.highscore/100))
-	get_parent().get_node("HUD").get_node("ScoreLabel").text = "SCORE: " + str(int(get_parent().score/100))
-	get_parent().get_node("HUD").get_node("SpeedLabel").text = "SPEED: " + str(int(get_parent().speed))

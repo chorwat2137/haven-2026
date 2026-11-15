@@ -70,7 +70,7 @@ func _process(delta: float) -> void:
 		speed += 0.01
 
 	score += speed
-
+	show_score()
 	
 	$Player.position.x += speed * delta * 60
 
@@ -83,7 +83,13 @@ func _process(delta: float) -> void:
 
 	generate_obs()
 
-
+func show_score():
+	if score > Highscore.highscore:
+		Highscore.highscore = score
+		Highscore.save_game()
+	$HUD.get_node("HighScoreLabel").text = "HIGH SCORE: " + str(int(Highscore.highscore/100))
+	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(int(score/100))
+	$HUD.get_node("SpeedLabel").text = "SPEED: " + str(int(speed))
 
 
 func generate_obs():
