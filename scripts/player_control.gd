@@ -61,6 +61,7 @@ func hp_dead(index):
 	hp_on_screen[index].die()
 
 func _process(delta: float) -> void:
+	show_score()
 	if Input.is_action_just_pressed("shoot") and pause == false:
 		shoot()
 	# Keyboard input
@@ -89,3 +90,10 @@ func _process(delta: float) -> void:
 		target_y,
 		1.0 - exp(-movement_speed * delta)
 	)
+func show_score():
+	if score > Highscore.highscore:
+		Highscore.highscore = score
+		Highscore.save_game()
+	$HUD.get_node("HighScoreLabel").text = "HIGH SCORE: " + str(int(Highscore.highscore/100))
+	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(int(get_parent().score/100))
+	$HUD.get_node("SpeedLabel").text = "SPEED: " + str(int(get_parent().speed))
