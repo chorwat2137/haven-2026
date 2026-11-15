@@ -159,7 +159,7 @@ func collision_handle() -> void:
 
 	music.start_rewind()
 
-	speed = -abs(START_SPEED * 2)
+	speed = -abs(START_SPEED * 4)
 
 	invincibility()
 
