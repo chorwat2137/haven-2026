@@ -15,7 +15,7 @@ var lane_positions: Array[float] = []
 var obstacle_types := [triola_scene, pocisk_scene, sp1_scene, sp2_scene, sp3_scene, sp4_scene, sp5_scene, sp6_scene, sp7_scene, sp8_scene,]
 var obstacles : Array
 var obstacle_heights = [200, 0, -200]
-
+var invincible = false
 var is_rewinding: bool = false
 
 var hp_on_screen : Array
@@ -122,7 +122,9 @@ func hit_obs(body):
 		
 		
 
-	
+func invincibility():
+	invincible = true
+	await get_tree().create_timer(1.0).timeout
 func collision_handle() -> void:
 
 	if is_rewinding:
