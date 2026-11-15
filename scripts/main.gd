@@ -128,11 +128,11 @@ func hit_obs(body):
 		
 
 func invincibility():
-	$Player/Shine.visible = true
+	$Player/Shine.show_sprite()
 	invincible = true
 	await get_tree().create_timer(1.5).timeout
 	invincible = false
-	$Player/Shine.visible = false
+	$Player/Shine.hide_sprite()
 func collision_handle() -> void:
 
 	if is_rewinding:
