@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://r71t7rc2y3mt" path="res://gfx/animation-death/fr8.png" id="10_7b2wa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f7mvp"]
-radius = 65.03076
+radius = 46.010868
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lojru"]
 animations = [{
