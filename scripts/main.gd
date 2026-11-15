@@ -49,7 +49,7 @@ func calculate_value(input: float) -> float:
 	return output_min + (input - input_min) * (output_max - output_min) / (input_max - input_min)
 	
 func _ready() -> void:
-
+	Highscore.load_game()
 	speed = START_SPEED
 	screen_size = get_viewport().get_visible_rect().size
 
@@ -133,6 +133,7 @@ func hit_obs(body):
 		print("ded")
 		game_over = true
 		#get_tree().paused = true
+		Highscore.save_game()
 		get_tree().change_scene_to_file.call_deferred("res://scenes/restart.tscn")
 		return
 
