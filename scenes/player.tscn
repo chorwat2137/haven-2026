@@ -23,11 +23,11 @@ script = ExtResource("3_dqkch")
 process_mode = 1
 texture_filter = 1
 position = Vector2(-3, -19.000008)
-scale = Vector2(8.375, 9.046876)
+scale = Vector2(8.375, 6.1875005)
 texture = ExtResource("2_g2els")
 
 [node name="Coll" type="CollisionShape2D" parent="." unique_id=60537568]
-position = Vector2(6, -4)
+position = Vector2(9, -2)
 shape = SubResource("CircleShape2D_f7mvp")
 
 [node name="Timer" type="Timer" parent="." unique_id=63438959]
