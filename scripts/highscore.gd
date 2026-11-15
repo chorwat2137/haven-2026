@@ -1,12 +1,17 @@
 extends Node
-var highscore = 0
+var highscore:int = 0
+const SAVE_PATH = "user://save.cfg"
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	var root = get_tree().root
-	# Using a negative index counts from the end, so this gets the last child node of `root`.
-	current_scene = root.get_child(-1)
+func save_game():
+	var config = ConfigFile.new()
+	config.set_value("player", "highscore", highscore)
+	config.save(SAVE_PATH)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
+func load_game():
+	var config = ConfigFile.new()
+
+	if config.load(SAVE_PATH) == OK:
+		highscore = config.get_value("player", "highscore", 0)
