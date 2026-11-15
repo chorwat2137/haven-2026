@@ -55,7 +55,7 @@ func _process(delta: float) -> void:
 	score += speed
 	$Player.position.x += speed * delta * 60
 	#$Spectrum.position.x = $Player.position.x - screen_size.x /2
-<<<<<<< HEAD
+
 	$Linia.position.x = $Player.position.x - screen_size.x
 	if hp_on_screen[0]:
 		hp_on_screen[0].position.x += speed * delta * 60
@@ -66,9 +66,9 @@ func _process(delta: float) -> void:
 	if hp_on_screen[2]:
 		hp_on_screen[2].position.x += speed * delta * 60
 		hp_on_screen[2].position.y = $Player.position.y - 400
-=======
+
 	$Linia.position.x = $Player.position.x - screen_size.x / 2
->>>>>>> a7fe6dc67ca90f9ce93dcfc8dff0dce4881f5435
+
 	#$Spectrum.position.y = $Player.position.y - screen_size.y /2
 	generate_obs()
 
@@ -77,9 +77,10 @@ var min_distance = 1000
 func add_hearts():
 	for i in range(3):
 		var h = hp.instantiate()
-		h.position = Vector2($heart_spawner.position.x + 100*i, $heart_spawner.position.y)
+		h.global_position = Vector2($heart_spawner.position.x + 100*i, $heart_spawner.position.y)
 		add_child(h)
 		hp_on_screen.append(h)
+		print("dodano hp")
 		
 func generate_obs():
 	if obstacles.is_empty() or last_obs == null or last_obs.position.x < score + min_distance:

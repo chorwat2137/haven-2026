@@ -10,7 +10,7 @@
 script = ExtResource("1_0wfyh")
 
 [node name="heart_spawner" type="Marker2D" parent="." unique_id=588003124]
-position = Vector2(-418, 114)
+position = Vector2(42, 95)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1628355729]
 stream = ExtResource("2_tbgi4")
