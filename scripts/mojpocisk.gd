@@ -5,6 +5,7 @@ extends Area2D
 var screen_size: Vector2i
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	hit_sound.play()
 	self.area_entered.connect(handle_delete)
 
 func _physics_process(delta):
@@ -27,7 +28,7 @@ func handle_delete(area):
 
 	area.die()
 	if hit_sound.stream != null:
-		hit_sound.play()
+
 	else:
 		print("No audio stream assigned!")
 
