@@ -14,7 +14,7 @@ var shoot_delay: float = 0.5
 func shoot():
 	if can_shoot:
 		var b = bullet.instantiate()
-		var b_y = self.position.y
+		var b_y = lane_positions[current_lane]
 		var b_x = self.position.x
 		b.position = Vector2i(b_x, b_y)
 		get_parent().add_child(b)
