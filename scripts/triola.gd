@@ -8,7 +8,6 @@ func _ready() -> void:
 
 	var file = "res://gfx/enemy/%d.png" % random
 	$Sprite2D.texture = load(file)
-	
 
 func _process(_delta: float) -> void:
 	pass
