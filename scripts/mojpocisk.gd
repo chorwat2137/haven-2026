@@ -28,5 +28,6 @@ func _process(_delta: float) -> void:
 func handle_delete(area):
 	hit_sound.stop()
 	hit_sound.play()
+	print(hit_sound)
 	area.die()
 	self.queue_free()
