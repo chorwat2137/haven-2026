@@ -18,7 +18,7 @@ func _on_body_entered(body):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	position.x += get_parent().speed * 2
-	if position.x < get_parent().get_node("Player").position.x + 100 or position.x > get_parent().get_node("Player").position.x + screen_size.x:
+	if position.x + 500 < get_parent().get_node("Player").position.x  or position.x > get_parent().get_node("Player").position.x + screen_size.x:
 		print("zmywam się stąd")
 		self.queue_free()
 	
