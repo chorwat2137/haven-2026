@@ -29,7 +29,7 @@ var current_rewind = 121
 
 var speed: float
 const START_SPEED: float = 5.0
-const MAX_SPEED: float = 20.0
+const MAX_SPEED: float = 30.0
 var cur_speed: float = START_SPEED
 
 var screen_size: Vector2i
@@ -40,7 +40,13 @@ var last_obs
 var min_distance = 1000
 
 func calculate_value(input: float) -> float:
-	return 1000.0 + (input - 5.0) * (1000.0 / 15.0)
+	var input_min = START_SPEED
+	var input_max = MAX_SPEED
+
+	var output_min = 800.0
+	var output_max = 1500.0
+
+	return output_min + (input - input_min) * (output_max - output_min) / (input_max - input_min)
 	
 func _ready() -> void:
 
