@@ -2,7 +2,6 @@ extends Sprite2D
 
 @export var rotation_speed: float = 2.0
 @export var animation_duration: float = 0.3
-
 var tween: Tween
 
 func _ready():
