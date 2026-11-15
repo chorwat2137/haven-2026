@@ -13,9 +13,9 @@ position = Vector2(500, 540)
 script = ExtResource("1_g2els")
 
 [node name="Shine" type="Sprite2D" parent="." unique_id=1403787821]
-visible = false
 scale = Vector2(0.34374994, 0.34374994)
 texture = ExtResource("2_qhqgy")
+offset = Vector2(-18.075, -1.16)
 script = ExtResource("3_dqkch")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1054903404]
