@@ -26,7 +26,7 @@ func _process(_delta: float) -> void:
 func handle_delete(area):
 
 	area.die()
-if hit_sound.stream != null:
+	if hit_sound.stream != null:
 		hit_sound.play()
 	else:
 		print("No audio stream assigned!")
