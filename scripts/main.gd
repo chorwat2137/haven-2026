@@ -123,6 +123,7 @@ func hit_obs(body):
 		
 
 func invincibility():
+	$Player/
 	invincible = true
 	await get_tree().create_timer(2.0).timeout
 	invincible = false
