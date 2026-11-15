@@ -120,6 +120,7 @@ func hit_obs(body):
 		$Player.hp_on_screen[body.hp].queue_free()
 
 	if body.hp <= 0:
+		print("ded")
 		game_over = true
 		#get_tree().paused = true
 		get_tree().change_scene_to_file.call_deferred("res://scenes/restart.tscn")
