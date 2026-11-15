@@ -1,7 +1,7 @@
 
 extends AudioStreamPlayer
 
-@export var rewind_speed: float = 1.0
+@export var rewind_speed: float = 1.5
 
 var audio_data: PackedByteArray
 var sample_rate: float
