@@ -24,6 +24,7 @@ var game_over = false
 
 var hp_on_screen: Array = []
 
+var rewind_duration: float = 3.0
 
 var speed: float
 const START_SPEED: float = 5.0
@@ -162,7 +163,7 @@ func collision_handle() -> void:
 
 	invincibility()
 
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(rewind_duration).timeout
 
 	if not is_inside_tree():
 		return
