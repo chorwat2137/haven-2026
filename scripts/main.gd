@@ -41,8 +41,8 @@ func calculate_value(input: float) -> float:
 	var input_min = START_SPEED
 	var input_max = MAX_SPEED
 
-	var output_min = 500.0
-	var output_max = 1500.0
+	var output_min = 300.0
+	var output_max = 1000.0
 
 	return output_min + (input - input_min) * (output_max - output_min) / (input_max - input_min)
 	
