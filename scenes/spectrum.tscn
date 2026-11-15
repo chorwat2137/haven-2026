@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://b216yxp764dc4" path="res://scripts/spectrum.gd" id="1_pwr6l"]
 
 [node name="TextureRect" type="TextureRect" unique_id=1982861665]
+process_mode = 1
 offset_right = 2560.0
 offset_bottom = 1600.0
 texture = ExtResource("1_08c88")

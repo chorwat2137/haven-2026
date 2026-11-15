@@ -27,7 +27,7 @@ var hp_on_screen: Array = []
 @export var rewind_duration: float = 1.5
 
 var speed: float
-const START_SPEED: float = 5.0
+const START_SPEED: float = 10.0
 const MAX_SPEED: float = 50.0
 var cur_speed: float = START_SPEED
 
