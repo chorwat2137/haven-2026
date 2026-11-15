@@ -12,6 +12,7 @@ var shoot_timer = Timer.new()
 @export var shoot_delay: float = 0.5
 var hp_t = preload("res://scenes/hp.tscn")
 var hp_on_screen: Array = []
+var score = 0
 
 func shoot():
 	if can_shoot:
@@ -75,7 +76,7 @@ func _process(delta: float) -> void:
 		
 		if pause:
 			$Sprite2D.texture = load("res://gfx/player_stop.png")
-			get_parent().score -= 10
+			score -= 10
 		else:
 			$Sprite2D.texture = load("res://gfx/player_forward.png")
 
