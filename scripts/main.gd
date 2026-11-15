@@ -130,7 +130,7 @@ func hit_obs(body):
 func invincibility():
 	$Player/Shine.visible = true
 	invincible = true
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.5).timeout
 	invincible = false
 	$Player/Shine.visible = false
 func collision_handle() -> void:
