@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://brqisgdg4wios" path="res://scripts/restart.gd" id="1_q5shd"]
 [ext_resource type="FontFile" uid="uid://ckbopv8mt6i20" path="res://gfx/GrapeSoda.ttf" id="2_7dg1w"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7dg1w"]
 bg_color = Color(0.7585879, 0.54588866, 0.70420504, 1)
 corner_radius_top_left = 30
@@ -54,7 +55,7 @@ theme_override_fonts/font = ExtResource("2_7dg1w")
 theme_override_font_sizes/font_size = 160
 text = "GAME OVER"
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=627571990]
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=38124733]
 layout_mode = 2
 size_flags_vertical = 3
 offset_transform_enabled = true
@@ -66,4 +67,17 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_lyatw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sjb2t")
 text = "RESTART"
 
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=627571990]
+layout_mode = 2
+size_flags_vertical = 3
+offset_transform_enabled = true
+theme_override_constants/h_separation = 30
+theme_override_fonts/font = ExtResource("2_7dg1w")
+theme_override_font_sizes/font_size = 120
+theme_override_styles/normal = SubResource("StyleBoxFlat_7dg1w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lyatw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sjb2t")
+text = "WYJDŹ"
+
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

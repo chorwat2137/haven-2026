@@ -9,6 +9,7 @@
 
 [node name="Node" type="Node" unique_id=839730489]
 script = ExtResource("1_0wfyh")
+rewind_duration = 1.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1628355729]
 stream = ExtResource("2_tbgi4")

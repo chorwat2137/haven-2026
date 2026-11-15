@@ -18,9 +18,9 @@ func shoot():
 		var b = bullet.instantiate()
 		var b_y = lane_positions[current_lane]
 		var b_x = self.position.x
-		b.position = Vector2i(b_x, b_y)
+		b.position = Vector2(b_x, b_y)
 		get_parent().add_child(b)
-		add_child(shoot_timer)
+
 		shoot_timer.start()
 		can_shoot = false
 
@@ -28,18 +28,20 @@ func reload():
 	can_shoot = true
 	#shoot_timer.queue_free()
 func _ready() -> void:
-	# Get vertical center of the screen
 	center_y = get_viewport_rect().size.y / 2.0
+
 	shoot_timer.wait_time = shoot_delay
+	shoot_timer.one_shot = true
 	shoot_timer.timeout.connect(reload)
-	# Define the three lanes
+
+	add_child(shoot_timer)
+
 	lane_positions = [
 		center_y - 200,
 		center_y,
 		center_y + 200
 	]
 
-	# Start in the middle lane
 	position.y = lane_positions[current_lane]
 	add_hearts()
 
