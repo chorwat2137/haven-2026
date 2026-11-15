@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://ckbopv8mt6i20" path="res://gfx/GrapeSoda.ttf" id="3_bqqt6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk65j"]
-bg_color = Color(0.7585879, 0.54588866, 0.70420504, 1)
+bg_color = Color(0.86, 0.61060005, 0.71867335, 1)
 corner_radius_top_left = 30
 corner_radius_bottom_right = 30
 corner_detail = 1
@@ -40,7 +40,8 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TloStartu" type="Sprite2D" parent="Panel" unique_id=226709484]
-position = Vector2(960, 507)
+position = Vector2(1042.7501, 541.25)
+scale = Vector2(1.0862429, 1.067621)
 texture = ExtResource("2_ekxnf")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1028378248]
