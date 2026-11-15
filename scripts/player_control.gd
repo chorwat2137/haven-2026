@@ -9,7 +9,7 @@ var current_lane: int = 1 # 0 = top, 1 = middle, 2 = bottom
 var center_y: float
 var can_shoot: bool = true
 var shoot_timer = Timer.new()
-var shoot_delay: float = 0.5
+@export var shoot_delay: float = 0.5
 var hp_t = preload("res://scenes/hp.tscn")
 var hp_on_screen: Array = []
 
