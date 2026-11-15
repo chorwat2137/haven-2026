@@ -9,6 +9,9 @@
 [node name="Node" type="Node" unique_id=839730489]
 script = ExtResource("1_0wfyh")
 
+[node name="heart_spawner" type="Marker2D" parent="." unique_id=588003124]
+position = Vector2(42, 95)
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1628355729]
 stream = ExtResource("2_tbgi4")
 autoplay = true
@@ -17,9 +20,9 @@ script = ExtResource("3_tbgi4")
 rewind_speed = 2.0
 
 [node name="Linia" type="ColorRect" parent="." unique_id=1232044274]
-offset_left = -780.0
+offset_left = -187.0
 offset_top = 240.0
-offset_right = -780.0
+offset_right = -187.0
 offset_bottom = 240.0
 color = Color(0.8509804, 0.6313726, 1, 0)
 
@@ -46,6 +49,7 @@ color = Color(0.52649975, 0.83965874, 0.18535423, 0.7647059)
 [node name="Player" parent="." unique_id=2121710803 instance=ExtResource("1_o5qli")]
 
 [node name="Camera2D2" type="Camera2D" parent="Player" unique_id=2011008339]
+position = Vector2(459, 0)
 
 [node name="Spectrum" parent="Player/Camera2D2" unique_id=137574055 instance=ExtResource("3_sugp2")]
 z_index = -1

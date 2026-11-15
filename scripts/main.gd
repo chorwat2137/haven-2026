@@ -10,6 +10,7 @@ var sp5_scene = preload("res://scenes/sp5.tscn")
 var sp6_scene = preload("res://scenes/sp6.tscn")
 var sp7_scene = preload("res://scenes/sp7.tscn")
 var sp8_scene = preload("res://scenes/sp8.tscn")
+var hp = preload("res://scenes/hp.tscn")
 var lane_positions: Array[float] = []
 var obstacle_types := [triola_scene, pocisk_scene, sp1_scene, sp2_scene, sp3_scene, sp4_scene, sp5_scene, sp6_scene, sp7_scene, sp8_scene,]
 var obstacles : Array
@@ -17,6 +18,7 @@ var obstacle_heights = [200, 0, -200]
 
 var is_rewinding: bool = false
 
+var hp_on_screen : Array
 
 var rewind_duration = 120
 var current_rewind = 121
@@ -31,7 +33,7 @@ var last_obs
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	add_hearts()	
 	
 	
 	speed = START_SPEED
@@ -48,18 +50,38 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if cur_speed < MAX_SPEED:
-		cur_speed += 0.01
+	if speed < MAX_SPEED and is_rewinding == false:
+		speed += 0.05
 	score += speed
 	$Player.position.x += speed * delta * 60
 	#$Spectrum.position.x = $Player.position.x - screen_size.x /2
+
 	$Linia.position.x = $Player.position.x - screen_size.x
+	if hp_on_screen[0]:
+		hp_on_screen[0].position.x += speed * delta * 60
+		hp_on_screen[0].position.y = $Player.position.y - 400
+	if hp_on_screen[1]:
+		hp_on_screen[1].position.x += speed * delta * 60
+		hp_on_screen[1].position.y = $Player.position.y - 400
+	if hp_on_screen[2]:
+		hp_on_screen[2].position.x += speed * delta * 60
+		hp_on_screen[2].position.y = $Player.position.y - 400
+
+	$Linia.position.x = $Player.position.x - screen_size.x / 2
+
 	#$Spectrum.position.y = $Player.position.y - screen_size.y /2
 	generate_obs()
 
 var min_distance = 1000
 
-
+func add_hearts():
+	for i in range(3):
+		var h = hp.instantiate()
+		h.global_position = Vector2($heart_spawner.position.x + 100*i, $heart_spawner.position.y)
+		add_child(h)
+		hp_on_screen.append(h)
+		print("dodano hp")
+		
 func generate_obs():
 	if obstacles.is_empty() or last_obs == null or last_obs.position.x < score + min_distance:
 
@@ -91,6 +113,11 @@ func add_obs(obs, x, y):
 
 func hit_obs(body, obs):
 	if body.name == "Player":
+		body.hp -= 1
+		if hp_on_screen[body.hp]:
+			hp_on_screen[body.hp].queue_free()
+		if body.hp <= 0:
+			get_tree().paused = true
 		collision_handle()
 
 		
@@ -106,7 +133,7 @@ func collision_handle() -> void:
 	$Player/Sprite2D.texture = load("res://gfx/player_back.png")
 	music.start_rewind()
 
-	speed = -START_SPEED*2
+	speed = -abs(START_SPEED*2)
 
 	await get_tree().create_timer(1.0).timeout
 
