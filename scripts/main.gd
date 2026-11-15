@@ -120,7 +120,7 @@ func hit_obs(body):
 			get_tree().paused = true
 		collision_handle()
 	elif body.name == "Player" and is_rewinding == true:
-		$Player.position.x -= 100
+		$Player.position.x -= 500
 		
 
 	
