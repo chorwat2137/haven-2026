@@ -48,7 +48,7 @@ process_mode = 3
 shoot_delay = 2.0
 
 [node name="Camera2D2" type="Camera2D" parent="Player" unique_id=2011008339]
-position = Vector2(459, 0)
+position = Vector2(691, 0)
 
 [node name="Spectrum" parent="Player/Camera2D2" unique_id=137574055 instance=ExtResource("3_sugp2")]
 z_index = -1
@@ -56,8 +56,9 @@ offset_left = -1030.0
 offset_top = -540.0
 offset_right = 951.0
 offset_bottom = 540.0
+metadata/_edit_use_anchors_ = true
 
 [node name="heart_spawner" type="Marker2D" parent="Player" unique_id=588003124]
-position = Vector2(-433, -404)
+position = Vector2(-201, -404)
 
 [node name="HUD" parent="." unique_id=1111737151 instance=ExtResource("6_tefeu")]
