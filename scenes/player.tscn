@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dffeuh4h2uie1" path="res://scripts/player_control.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://dqfnica024n7u" path="res://gfx/player_forward.png" id="2_g2els"]
 [ext_resource type="Texture2D" uid="uid://cid037cnqfhck" path="res://gfx/shine.png" id="2_qhqgy"]
+[ext_resource type="Script" uid="uid://b4qe4wxdinmks" path="res://scripts/shine.gd" id="3_dqkch"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f7mvp"]
 radius = 65.00769
@@ -15,6 +16,7 @@ script = ExtResource("1_g2els")
 visible = false
 scale = Vector2(0.34374994, 0.34374994)
 texture = ExtResource("2_qhqgy")
+script = ExtResource("3_dqkch")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1054903404]
 texture_filter = 1
