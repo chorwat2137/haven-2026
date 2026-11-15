@@ -9,7 +9,6 @@ radius = 77.00649
 
 [node name="Pocisk" type="Area2D" unique_id=307245731 groups=["obsticles"]]
 script = ExtResource("1_lnkpp")
-speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1819449505]
 texture_filter = 1
@@ -24,6 +23,7 @@ shape = SubResource("CircleShape2D_f7mvp")
 visible = false
 stream = ExtResource("3_vxg0f")
 volume_db = 2.643
+autoplay = true
 max_polyphony = 2
 bus = &"SFX"
 
