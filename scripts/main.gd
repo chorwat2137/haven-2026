@@ -115,7 +115,6 @@ func hit_obs(body):
 	if body.name == "Player":
 		body.hp -= 1
 		if hp_on_screen[body.hp]:
-			hp.texture = "res//:gfx/death_animation"
 			hp_on_screen[body.hp].queue_free()
 		if body.hp <= 0:
 			get_tree().paused = true
