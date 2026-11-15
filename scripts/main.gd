@@ -93,7 +93,7 @@ func show_score():
 
 
 func generate_obs():
-	if obstacles.is_empty() or last_obs == null or last_obs.position.x < score + min_distance:
+	if obstacles.is_empty() or last_obs == null or last_obs.position.x < score + min_distance + randi_range(0,100):
 
 		var obs_type = obstacle_types[randi() % obstacle_types.size()]
 		var max_obs = 1
