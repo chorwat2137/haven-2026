@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bpiqg3idm5vsm"]
 
-[ext_resource type="Script" uid="uid://d11d37iuc8a34" path="res://scenes/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://d11d37iuc8a34" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://0u30kfjni7po" path="res://gfx/tlo startu.png" id="2_ekxnf"]
+[ext_resource type="FontFile" uid="uid://ckbopv8mt6i20" path="res://gfx/GrapeSoda.ttf" id="3_bqqt6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk65j"]
 bg_color = Color(0.7585879, 0.54588866, 0.70420504, 1)
@@ -32,6 +34,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l6cm7")
 
+[node name="Panel" type="Panel" parent="." unique_id=1761110125]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TloStartu" type="Sprite2D" parent="Panel" unique_id=226709484]
+position = Vector2(960, 507)
+texture = ExtResource("2_ekxnf")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1028378248]
 layout_mode = 1
 anchors_preset = 8
@@ -46,19 +57,21 @@ offset_bottom = 252.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 1.0800003)
-theme_override_constants/separation = 50
+theme_override_constants/separation = 80
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=506221285]
 layout_mode = 2
-theme_override_font_sizes/font_size = 120
-text = "ACTUAL SLOP"
+theme_override_fonts/font = ExtResource("3_bqqt6")
+theme_override_font_sizes/font_size = 180
+text = "TILEMASTER2000"
 
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=1063866426]
 layout_mode = 2
 size_flags_vertical = 3
 offset_transform_enabled = true
 theme_override_constants/h_separation = 30
-theme_override_font_sizes/font_size = 100
+theme_override_fonts/font = ExtResource("3_bqqt6")
+theme_override_font_sizes/font_size = 140
 theme_override_styles/normal = SubResource("StyleBoxFlat_kk65j")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/hover = SubResource("StyleBoxFlat_l6cm7")
@@ -69,7 +82,8 @@ layout_mode = 2
 size_flags_vertical = 3
 offset_transform_enabled = true
 theme_override_constants/h_separation = 30
-theme_override_font_sizes/font_size = 100
+theme_override_fonts/font = ExtResource("3_bqqt6")
+theme_override_font_sizes/font_size = 140
 theme_override_styles/normal = SubResource("StyleBoxFlat_kk65j")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/hover = SubResource("StyleBoxFlat_l6cm7")

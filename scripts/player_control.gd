@@ -8,6 +8,7 @@ var current_lane: int = 1 # 0 = top, 1 = middle, 2 = bottom
 var center_y: float
 
 func shoot():
+	
 	var b = bullet.instantiate()
 	var b_y = self.position.y
 	var b_x = self.position.x
