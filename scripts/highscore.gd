@@ -1,6 +1,5 @@
 extends Node
-var current_scene = null	
-Highscore.highscore = 0
+var highscore = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var root = get_tree().root
