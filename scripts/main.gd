@@ -34,7 +34,6 @@ var cur_speed: float = START_SPEED
 
 var screen_size: Vector2i
 var score = 0
-var high_score = 0
 var last_obs
 
 var min_distance = 1000
@@ -86,9 +85,8 @@ func _process(delta: float) -> void:
 	generate_obs()
 
 func show_score():
-	if score > high_score:
-		high_score = score
-		Highscore.highscore = high_score
+	if score > Highscore.highscore:
+		Highscore.highscore = score
 		Highscore.save_game()
 	$HUD.get_node("HighScoreLabel").text = "HIGH SCORE: " + str(int(Highscore.highscore/100))
 	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(int(score/100))
