@@ -111,7 +111,7 @@ func add_obs(obs, x, y):
 	add_child(obs)
 	obstacles.append(obs)
 
-func hit_obs(body, obs):
+func hit_obs(body):
 	if body.name == "Player":
 		body.hp -= 1
 		if hp_on_screen[body.hp]:
@@ -119,7 +119,6 @@ func hit_obs(body, obs):
 		if body.hp <= 0:
 			get_tree().paused = true
 		collision_handle()
-
 		
 #func del_bullets(body):
 	#if body.name == "Player" && bo m    0dy.position.x < 
