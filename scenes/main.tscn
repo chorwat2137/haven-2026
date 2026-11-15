@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://cdqq14okybsn0" path="res://scenes/hud.tscn" id="6_tefeu"]
 
 [node name="Node" type="Node" unique_id=839730489]
-process_mode = 1
 script = ExtResource("1_0wfyh")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1628355729]
