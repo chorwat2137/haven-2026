@@ -19,6 +19,7 @@ func _on_body_entered(body):
 func _process(delta: float) -> void:
 	position.x += get_parent().speed * 2
 	if position.x < get_parent().get_node("Player").position.x or position.x > get_parent().get_node("Player").position.x + screen_size.x:
+		print("zmywam się stąd")
 		self.queue_free()
 	
 func handle_delete(area):
