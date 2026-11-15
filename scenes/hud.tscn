@@ -14,7 +14,7 @@ text = "SCORE:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ScoreLabel2" type="Label" parent="." unique_id=463841363]
+[node name="SpeedLabel" type="Label" parent="." unique_id=463841363]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
