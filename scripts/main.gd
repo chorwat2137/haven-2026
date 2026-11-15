@@ -147,7 +147,7 @@ func invincibility():
 	$Player/Shine.show_sprite()
 	invincible = true
 
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(2.0).timeouts
 
 	if not is_inside_tree():
 		return
