@@ -60,7 +60,7 @@ func _process(delta: float) -> void:
 	if game_over:
 		return
 
-	if speed < MAX_SPEED and not is_rewinding:
+	if speed < MAX_SPEED and not is_rewinding and delta % 2 == 1:
 		speed += 0.1
 
 	score += speed
