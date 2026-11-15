@@ -3,7 +3,7 @@ extends CharacterBody2D
 var lane_positions: Array[float] = []
 var bullet = preload("res://scenes/mojpocisk.tscn")
 @export var movement_speed: float = 10.0
-
+@export var hp: int = 3
 var current_lane: int = 1 # 0 = top, 1 = middle, 2 = bottom
 var center_y: float
 
