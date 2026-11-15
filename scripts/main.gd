@@ -121,13 +121,9 @@ func add_obs(obs, x, y):
 
 
 func hit_obs(body):
-	if body.name != "Player" or invincible or game_over:
-		return
-
-	body.hp -= 1
-
-	if body.hp >= 0 and body.hp < hp_on_screen.size():
-		if is_instance_valid(hp_on_screen[body.hp]):
+	if body.name == "Player" and invincible == false:
+		body.hp -= 1
+		if hp_on_screen[body.hp]:
 			hp_on_screen[body.hp].queue_free()
 
 	if body.hp <= 0:
@@ -140,7 +136,7 @@ func hit_obs(body):
 
 
 func invincibility():
-	$Player/Shine.visible = true
+	$Player/Shine.show_sprite()
 	invincible = true
 
 	await get_tree().create_timer(2.0).timeout
@@ -150,7 +146,9 @@ func invincibility():
 
 	invincible = false
 	$Player/Shine.visible = false
-
+	await get_tree().create_timer(1.5).timeout
+	invincible = false
+	$Player/Shine.hide_sprite()
 
 func collision_handle() -> void:
 	if is_rewinding or game_over:
