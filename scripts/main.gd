@@ -96,8 +96,9 @@ func generate_obs():
 	if obstacles.is_empty() or last_obs == null or last_obs.position.x < score + min_distance:
 
 		var obs_type = obstacle_types[randi() % obstacle_types.size()]
-
-		var max_obs = 2
+		var max_obs = 1
+		if randi_range(0,1):
+			max_obs = 2
 		var obs_count = randi_range(1, max_obs)
 
 		var available_lanes = [0, 1, 2]
