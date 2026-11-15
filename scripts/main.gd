@@ -162,7 +162,6 @@ func collision_handle() -> void:
 	music.start_rewind()
 
 	speed = -abs(START_SPEED * 4)
-	score -= 100
 	invincibility()
 
 	await get_tree().create_timer(rewind_duration).timeout
