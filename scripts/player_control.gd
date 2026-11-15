@@ -63,16 +63,15 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("shoot") and pause == false:
 		shoot()
 	# Keyboard input
-	if Input.is_action_just_pressed("track_up") and pause == false:
+	if Input.is_action_just_pressed("track_up"):
 		current_lane = max(0, current_lane - 1)
 
-	if Input.is_action_just_pressed("track_down") and pause == false:
+	if Input.is_action_just_pressed("track_down"):
 		current_lane = min(2, current_lane + 1)
 	if Input.is_action_just_pressed("pause"):
 		
 		pause = !pause
-		#get_tree().paused = pause
-		get_parent().speed = 0
+		get_tree().paused = pause
 		
 		if pause:
 			$Sprite2D.texture = load("res://gfx/player_stop.png")
