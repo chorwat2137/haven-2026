@@ -5,7 +5,8 @@
 
 [node name="TextureRect" type="TextureRect" unique_id=1982861665]
 process_mode = 1
-offset_right = 2560.0
+offset_right = 2817.3914
 offset_bottom = 1600.0
+scale = Vector2(0.69, 0.69)
 texture = ExtResource("1_08c88")
 script = ExtResource("1_pwr6l")

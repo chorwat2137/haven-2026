@@ -51,7 +51,7 @@ func _ready() -> void:
 	speed = START_SPEED
 	screen_size = get_viewport().get_visible_rect().size
 
-	$Player/Camera2D2/Spectrum.position.y = float(-screen_size.y) / 2
+	
 
 	var center_y = screen_size.y / 2.0
 

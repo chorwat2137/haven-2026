@@ -53,11 +53,16 @@ position = Vector2(691, 0)
 
 [node name="Spectrum" parent="Player/Camera2D2" unique_id=137574055 instance=ExtResource("3_sugp2")]
 z_index = -1
-offset_left = -1030.0
-offset_top = -540.0
-offset_right = 951.0
-offset_bottom = 540.0
-metadata/_edit_use_anchors_ = true
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -1031.0
+offset_top = -572.00024
+offset_right = 1949.0
+offset_bottom = 1027.9998
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+size_flags_horizontal = 3
 
 [node name="heart_spawner" type="Marker2D" parent="Player" unique_id=588003124]
 position = Vector2(-201, -404)
