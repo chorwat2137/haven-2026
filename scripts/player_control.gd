@@ -13,6 +13,7 @@ func shoot():
 	var b_x = self.position.x
 	b.position = Vector2i(b_x, b_y)
 	get_parent().add_child(b)
+	
 
 func _ready() -> void:
 	# Get vertical center of the screen

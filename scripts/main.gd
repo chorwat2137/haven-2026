@@ -120,11 +120,19 @@ func hit_obs(body):
 			get_tree().paused = true
 		collision_handle()
 		
+
+#func del_bullets(body):
+	#if body.name == "Player" && bo m    0dy.position.x < 
+	
+
 		
 
 func invincibility():
+	$Player/Shine.visible = true
 	invincible = true
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(2.0).timeout
+	invincible = false
+	$Player/Shine.visible = false
 func collision_handle() -> void:
 
 	if is_rewinding:
@@ -135,7 +143,7 @@ func collision_handle() -> void:
 	music.start_rewind()
 
 	speed = -abs(START_SPEED*2)
-
+	invincibility()
 	await get_tree().create_timer(1.0).timeout
 
 	music.stop_rewind()
