@@ -77,7 +77,7 @@ func _process(delta: float) -> void:
 		
 		if pause:
 			$Sprite2D.texture = load("res://gfx/player_stop.png")
-			score -= 10
+			get_parent().score -= 10
 		else:
 			$Sprite2D.texture = load("res://gfx/player_forward.png")
 
