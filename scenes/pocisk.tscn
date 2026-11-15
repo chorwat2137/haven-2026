@@ -64,3 +64,5 @@ position = Vector2(2.25, -1.75)
 scale = Vector2(1.1, 1.1)
 sprite_frames = SubResource("SpriteFrames_7ue5k")
 animation = &"death"
+
+[node name="Timer" type="Timer" parent="." unique_id=535517300]

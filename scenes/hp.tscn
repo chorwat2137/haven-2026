@@ -50,6 +50,7 @@ script = ExtResource("1_jchhy")
 scale = Vector2(4, 4)
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=612492977]
+texture_filter = 1
 texture = ExtResource("1_al052")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=2044642213]

@@ -13,6 +13,7 @@ func _process(_delta: float) -> void:
 	
 func die():
 	timer_disappear.start()
+	$CollisionShape2D.set_deferred("disabled", true)
 	$Sprite2D.visible = false
 	$AnimatedSprite2D.visible = true
 	$AnimatedSprite2D.play("death")
