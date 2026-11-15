@@ -15,7 +15,6 @@ stream = ExtResource("2_tefeu")
 autoplay = true
 bus = &"Music"
 script = ExtResource("3_tbgi4")
-rewind_speed = 2.0
 
 [node name="Linia" type="ColorRect" parent="." unique_id=1232044274]
 offset_left = -187.0
