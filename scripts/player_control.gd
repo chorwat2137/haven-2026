@@ -9,6 +9,7 @@ var current_lane: int = 1 # 0 = top, 1 = middle, 2 = bottom
 var center_y: float
 var can_shoot: bool = true
 var shoot_timer = Timer.new()
+var shoot_delay: float = 1.0
 
 func shoot():
 	if can_shoot:
@@ -27,7 +28,7 @@ func reload():
 func _ready() -> void:
 	# Get vertical center of the screen
 	center_y = get_viewport_rect().size.y / 2.0
-	shoot_timer.wait_time = 5.0
+	shoot_timer.wait_time = shoot_delay
 	shoot_timer.timeout.connect(reload)
 	# Define the three lanes
 	lane_positions = [
