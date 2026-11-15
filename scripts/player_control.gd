@@ -10,6 +10,8 @@ var center_y: float
 var can_shoot: bool = true
 var shoot_timer = Timer.new()
 var shoot_delay: float = 0.5
+var hp_t = preload("res://scenes/hp.tscn")
+var hp_on_screen: Array = []
 
 func shoot():
 	if can_shoot:
@@ -39,6 +41,20 @@ func _ready() -> void:
 
 	# Start in the middle lane
 	position.y = lane_positions[current_lane]
+	add_hearts()
+
+
+func add_hearts():
+	for i in range(3):
+		var h = hp_t.instantiate()
+		h.global_position = Vector2(
+			$heart_spawner.position.x + 100 * i,
+			$heart_spawner.position.y
+		)
+
+		add_child(h)
+		hp_on_screen.append(h)
+		print("dodano hp")
 
 
 func _process(delta: float) -> void:

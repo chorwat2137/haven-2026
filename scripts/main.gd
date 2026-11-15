@@ -12,7 +12,6 @@ var sp5_scene = preload("res://scenes/sp5.tscn")
 var sp6_scene = preload("res://scenes/sp6.tscn")
 var sp7_scene = preload("res://scenes/sp7.tscn")
 var sp8_scene = preload("res://scenes/sp8.tscn")
-var hp = preload("res://scenes/hp.tscn")
 
 var lane_positions: Array[float] = []
 var obstacle_types := [triola_scene, pocisk_scene, sp1_scene, sp2_scene, sp3_scene, sp4_scene, sp5_scene, sp6_scene, sp7_scene, sp8_scene]
@@ -42,7 +41,6 @@ var min_distance = 1000
 
 
 func _ready() -> void:
-	add_hearts()
 
 	speed = START_SPEED
 	screen_size = get_viewport().get_visible_rect().size
@@ -85,18 +83,6 @@ func show_score():
 	$HUD.get_node("HighScoreLabel").text = "HIGH SCORE: " + str(int(high_score/100))
 	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(int(score/100))
 
-func add_hearts():
-	for i in range(3):
-		var h = hp.instantiate()
-		h.global_position = Vector2(
-			$heart_spawner.position.x + 100 * i,
-			$heart_spawner.position.y
-		)
-
-		add_child(h)
-		hp_on_screen.append(h)
-		print("dodano hp")
-
 
 func generate_obs():
 	if obstacles.is_empty() or last_obs == null or last_obs.position.x < score + min_distance:
@@ -131,8 +117,7 @@ func add_obs(obs, x, y):
 func hit_obs(body):
 	if body.name == "Player" and invincible == false:
 		body.hp -= 1
-		if hp_on_screen[body.hp]:
-			hp_on_screen[body.hp].queue_free()
+		$Player.hp_on_screen[body.hp].queue_free()
 
 	if body.hp <= 0:
 		game_over = true
