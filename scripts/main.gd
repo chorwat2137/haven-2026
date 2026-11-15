@@ -112,7 +112,7 @@ func add_obs(obs, x, y):
 	obstacles.append(obs)
 
 func hit_obs(body):
-	if body.name == "Player":
+	if body.name == "Player" and invincible == false:
 		body.hp -= 1
 		if hp_on_screen[body.hp]:
 			hp_on_screen[body.hp].queue_free()
@@ -125,6 +125,7 @@ func hit_obs(body):
 func invincibility():
 	invincible = true
 	await get_tree().create_timer(1.0).timeout
+	invincible = false
 func collision_handle() -> void:
 
 	if is_rewinding:
@@ -137,7 +138,7 @@ func collision_handle() -> void:
 	speed = -abs(START_SPEED*2)
 
 	await get_tree().create_timer(1.0).timeout
-
+	invincibility()
 	music.stop_rewind()
 
 	speed = START_SPEED
