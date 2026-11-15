@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bxktfgb6jgqku" path="res://scripts/mojpocisk.gd" id="1_lnkpp"]
 [ext_resource type="Texture2D" uid="uid://c8njdqwug31o5" path="res://gfx/mute.png" id="2_lnkpp"]
+[ext_resource type="AudioStream" uid="uid://c13gm1ek10y2g" path="res://sfx/Cowbell 808 Wood Combo.wav" id="3_vxg0f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f7mvp"]
 radius = 77.00649
@@ -17,5 +18,8 @@ texture = ExtResource("2_lnkpp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=496647538]
 shape = SubResource("CircleShape2D_f7mvp")
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="." unique_id=1143002788]
+stream = ExtResource("3_vxg0f")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
