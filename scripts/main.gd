@@ -119,7 +119,13 @@ func hit_obs(body):
 		if body.hp <= 0:
 			get_tree().paused = true
 		collision_handle()
-
+	else if body.name == "Player" and is_rewinding == true:
+		body.hp -= 1
+		if hp_on_screen[body.hp]:
+			hp_on_screen[body.hp].queue_free()
+		if body.hp <= 0:
+			get_tree().paused = true
+		collision_handle()
 		
 
 	
