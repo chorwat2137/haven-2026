@@ -95,5 +95,5 @@ func show_score():
 		Highscore.highscore = score
 		Highscore.save_game()
 	get_parent().get_node("HUD").get_node("HighScoreLabel").text = "HIGH SCORE: " + str(int(Highscore.highscore/100))
-	get_parent().get_node("HUD").("ScoreLabel").text = "SCORE: " + str(int(get_parent().score/100))
-	get_parent().get_node("HUD").("SpeedLabel").text = "SPEED: " + str(int(get_parent().speed))
+	get_parent().get_node("HUD").get_node("ScoreLabel").text = "SCORE: " + str(int(get_parent().score/100))
+	get_parent().get_node("HUD").get_node("SpeedLabel").text = "SPEED: " + str(int(get_parent().speed))
