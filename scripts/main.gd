@@ -28,7 +28,7 @@ var hp_on_screen: Array = []
 
 var speed: float
 const START_SPEED: float = 5.0
-const MAX_SPEED: float = 30.0
+const MAX_SPEED: float = 50.0
 var cur_speed: float = START_SPEED
 
 var screen_size: Vector2i
@@ -42,7 +42,7 @@ func calculate_value(input: float) -> float:
 	var input_max = MAX_SPEED
 
 	var output_min = 300.0
-	var output_max = 1000.0
+	var output_max = 1200.0
 
 	return output_min + (input - input_min) * (output_max - output_min) / (input_max - input_min)
 	
@@ -67,7 +67,7 @@ func _process(delta: float) -> void:
 		return
 	min_distance = calculate_value(speed)
 	if speed < MAX_SPEED and not is_rewinding:
-		speed += 0.05
+		speed += 0.01
 
 	score += speed
 	show_score()
