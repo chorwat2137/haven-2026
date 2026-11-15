@@ -71,8 +71,9 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
 		
 		pause = !pause
-		get_tree().paused = pause
-
+		#get_tree().paused = pause
+		get_parent().speed = 0
+		
 		if pause:
 			$Sprite2D.texture = load("res://gfx/player_stop.png")
 		else:
