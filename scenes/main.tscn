@@ -27,21 +27,21 @@ color = Color(0.8509804, 0.6313726, 1, 0)
 layout_mode = 0
 offset_right = 3430.0
 offset_bottom = 200.0
-color = Color(0.99514014, 0, 0.38973284, 0.7647059)
+color = Color(0.89, 0.89, 0.89, 0.7647059)
 
 [node name="Linia3" type="ColorRect" parent="Linia" unique_id=1715034830]
 layout_mode = 0
 offset_top = 200.0
 offset_right = 3430.0
 offset_bottom = 400.0
-color = Color(0.9624019, 0.6476131, 0, 0.7647059)
+color = Color(0.76, 0.76, 0.76, 0.7647059)
 
 [node name="Linia4" type="ColorRect" parent="Linia" unique_id=1620266623]
 layout_mode = 0
 offset_top = 400.0
 offset_right = 3430.0
 offset_bottom = 600.0
-color = Color(0.43949986, 0.43, 1, 0.7647059)
+color = Color(0.64, 0.64, 0.64, 0.7647059)
 
 [node name="Player" parent="." unique_id=2121710803 instance=ExtResource("1_o5qli")]
 process_mode = 3
