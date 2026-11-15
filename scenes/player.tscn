@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://b4qe4wxdinmks" path="res://scripts/shine.gd" id="3_dqkch"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f7mvp"]
-radius = 59.135437
+radius = 43.011627
 
 [node name="Player" type="CharacterBody2D" unique_id=2121710803]
 position = Vector2(500, 540)
